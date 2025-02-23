@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Quiz</title>
+    <link rel="stylesheet" href="/css/quiz.css"> <link rel="icon" type=""image/png" href="/assets/logo.png">
+
+</head>
+<body>
+    <div class="quiz-container">
+        <!-- Question 1 -->
+        <section class="question-section">
+            <div class="question-box">What is the size of 'int' in C?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. 2 bytes</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. 4 bytes</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. Depends on compiler</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. 8 bytes</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <!-- Question 2 -->
+       <section class="question-section">
+            <div class="question-box">Which is used for standard output in C?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. scanf()</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. printf()</button>
+                 <button class="option" onclick="checkAnswer(this, 'C')">C. getchar()</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. fgets()</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+        <!--Question 3-->
+        <section class="question-section">
+            <div class="question-box">Which data type is used to store a single character in C?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. Char</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. int</button>
+                 <button class="option" onclick="checkAnswer(this, 'C')">C. float</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. double</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+        <!--Quesion 4-->
+        
+        <section class="question-section">
+            <div class="question-box">What will be the output of sizeof(double) in most C compilers?
+
+            </div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. 2</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. 4</button>
+                 <button class="option" onclick="checkAnswer(this, 'C')">C. 8</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. 16</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: 16</p>
+        </section>
+        <!-- Add remaining 48 questions following same structure -->
+         <!-- Question 5 -->
+<section class="question-section">
+    <div class="question-box">What is the correct way to declare a constant in C?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. constant int x = 5;</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. const int x = 5;</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. int const x = 5;</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. Both B and C</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: D</p>
+</section>
+
+<!-- Question 6 -->
+<section class="question-section">
+    <div class="question-box">Which function is used to read a string in C?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. scanf()</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. gets()</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. fgets()</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. printf()</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: C</p>
+</section>
+
+<!-- Question 7 -->
+<section class="question-section">
+    <div class="question-box">Which function is used for formatted output in C?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. printf()</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. cout</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. puts()</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. scanf()</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: A</p>
+</section>
+
+<!-- Question 8 -->
+<section class="question-section">
+    <div class="question-box">What does %d format specifier represent?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. Character</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. Integer</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. Floating point</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. String</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: B</p>
+</section>
+
+<!-- Question 9 -->
+<section class="question-section">
+    <div class="question-box">What is the difference between puts() and printf()?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. puts() prints a newline automatically</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. printf() cannot print strings</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. puts() requires format specifiers</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. No difference</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: A</p>
+</section>
+
+<!-- Question 10 -->
+<section class="question-section">
+    <div class="question-box">What does scanf("%d", &x); do?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. Takes input and stores in x</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. Prints x</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. Assigns 0 to x</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. None of the above</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: A</p>
+</section>
+
+<!-- Question 11 -->
+<section class="question-section">
+    <div class="question-box">What is the default return type of a function in C?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. float</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. void</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. int</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. char</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: C</p>
+</section>
+
+<!-- Question 12 -->
+<section class="question-section">
+    <div class="question-box">Which keyword is used to declare a function in C?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. function</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. void</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. def</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. fn</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: B</p>
+</section>
+
+<!-- Question 13 -->
+<section class="question-section">
+    <div class="question-box">What is function recursion?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. A function calling another function</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. A function calling itself</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. A function without parameters</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. A function with only one argument</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: B</p>
+</section>
+
+<!-- Question 14 -->
+<section class="question-section">
+    <div class="question-box">What is the scope of a local variable?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. Only within the function it is declared in</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. Throughout the program</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. Inside the main function</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. None of the above</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: A</p>
+</section>
+
+<!-- Question 15 -->
+<section class="question-section">
+    <div class="question-box">Which of the following is a function prototype?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. int sum();</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. sum();</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. void main();</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. prototype int sum();</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: A</p>
+</section>
+    </div>
+  <!-- Question 16 -->
+<section class="question-section">
+    <div class="question-box">What is a register variable?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. A variable stored in RAM</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. A variable stored in CPU registers</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. A global variable</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. A dynamically allocated variable</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: B</p>
+</section>
+
+<!-- Question 17 -->
+<section class="question-section">
+    <div class="question-box">Which keyword is used to declare a register variable?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. static</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. register</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. extern</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. volatile</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: B</p>
+</section>
+
+<!-- Question 18 -->
+<section class="question-section">
+    <div class="question-box">Which storage class has the fastest access time?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. auto</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. register</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. extern</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. static</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: B</p>
+</section>
+
+<!-- Question 19 -->
+<section class="question-section">
+    <div class="question-box">Which variable type remains unchanged throughout the execution of a program?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. static</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. auto</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. extern</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. register</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: A</p>
+</section>
+
+<!-- Question 20 -->
+<section class="question-section">
+    <div class="question-box">What is the default value of an uninitialized int variable?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. 0</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. Garbage value</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. -1</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. NULL</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: B</p>
+</section>
+
+<!-- Question 21 -->
+<section class="question-section">
+    <div class="question-box">How can you pass command line arguments to a C program?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. Using argc and argv[]</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. Using scanf()</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. Using getchar()</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. Using printf()</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: A</p>
+</section>
+
+<!-- Question 22 -->
+<section class="question-section">
+    <div class="question-box">What is the first argument in argv[]?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. Command-line arguments count</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. Program name</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. NULL</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. The last argument</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: B</p>
+</section>
+
+<!-- Question 23 -->
+<section class="question-section">
+    <div class="question-box">What is the correct syntax for accessing command-line arguments?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. argv(0)</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. argv[1]</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. argc</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. getchar()</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: B</p>
+</section>
+
+<!-- Question 24 -->
+<section class="question-section">
+    <div class="question-box">What will argc contain if no arguments are passed?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. -1</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. 1</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. 0</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. NULL</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: B</p>
+</section>
+
+<!-- Question 25 -->
+<section class="question-section">
+    <div class="question-box">Which function is used to terminate a C program from command-line execution?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. pause()</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. exit()</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. return</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. stop()</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: B</p>
+</section>
+
+<!-- Question 26 -->
+<section class="question-section">
+    <div class="question-box">How is a variable declared in C?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. var x;</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. int x;</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. declare x;</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. x = int;</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: B</p>
+</section>
+
+<!-- Question 27 -->
+<section class="question-section">
+    <div class="question-box">What is the keyword for a constant variable?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. constant</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. const</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. final</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. static</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: B</p>
+</section>
+
+<!-- Question 28 -->
+<section class="question-section">
+    <div class="question-box">Which header file is needed for printf()?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. stdio.h</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. stdlib.h</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. string.h</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. math.h</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: A</p>
+</section>
+
+<!-- Question 29 -->
+<section class="question-section">
+    <div class="question-box">What does gets() do?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. Reads a string from standard input</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. Writes a string to standard output</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. Reads a character from standard input</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. Writes a character to standard output</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: A</p>
+</section>
+
+<!-- Question 30 -->
+<section class="question-section">
+    <div class="question-box">Which function is safer than gets()?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. scanf()</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. fgets()</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. getchar()</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. puts()</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: B</p>
+</section>
+
+<!-- Question 31 -->
+<section class="question-section">
+    <div class="question-box">What is a static function in C?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. A function that cannot be called</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. A function with static variables</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. A function with a static return type</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. A function with internal linkage</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: D</p>
+</section>
+
+<!-- Question 32 -->
+<section class="question-section">
+    <div class="question-box">Can main() be recursive?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. Yes</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. No</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. Only in C++</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. Only in C</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: A</p>
+</section>
+
+<!-- Question 33 -->
+<section class="question-section">
+    <div class="question-box">What does return do in a function?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. Ends the function execution</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. Returns a value to the caller</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. Both A and B</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. None of the above</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: C</p>
+</section>
+
+<!-- Question 34 -->
+<section class="question-section">
+    <div class="question-box">How do you return multiple values from a function?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. Using an array</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. Using a structure</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. Using pointers</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. All of the above</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: D</p>
+</section>
+
+<!-- Question 35 -->
+<section class="question-section">
+    <div class="question-box">What is a global variable?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. A variable declared inside a function</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. A variable declared outside all functions</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. A variable with static storage duration</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. A variable with automatic storage duration</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: B</p>
+</section>
+
+<!-- Question 36 -->
+<section class="question-section">
+    <div class="question-box">What is an automatic variable?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. A variable with static storage duration</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. A variable with dynamic storage duration</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. A variable with automatic storage duration</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. A variable with external linkage</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: C</p>
+</section>
+
+<!-- Question 37 -->
+<section class="question-section">
+    <div class="question-box">What does extern keyword do?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. Declares a variable with external linkage</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. Declares a variable with internal linkage</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. Declares a variable with static storage duration</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. Declares a variable with automatic storage duration</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: A</p>
+</section>
+
+<!-- Question 38 -->
+<section class="question-section">
+    <div class="question-box">What is the purpose of volatile keyword?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. To optimize the variable</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. To prevent the variable from being optimized</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. To declare a constant variable</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. To declare a static variable</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: B</p>
+</section>
+
+<!-- Question 39 -->
+<section class="question-section">
+    <div class="question-box">What is dynamic memory allocation?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. Allocating memory at compile time</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. Allocating memory at runtime</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. Allocating memory in the stack</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. Allocating memory in the register</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: B</p>
+</section>
+
+<!-- Question 40 -->
+<section class="question-section">
+    <div class="question-box">Which library function is used for memory allocation?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. malloc()</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. printf()</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. scanf()</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. free()</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: A</p>
+</section>
+
+<!-- Question 41 -->
+<section class="question-section">
+    <div class="question-box">What is a dangling pointer?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. A pointer that points to a valid memory location</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. A pointer that points to a memory location that has been freed</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. A pointer that points to a null value</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. A pointer that points to a static variable</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: B</p>
+</section>
+
+<!-- Question 42 -->
+<section class="question-section">
+    <div class="question-box">What is malloc() used for?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. Allocating memory at compile time</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. Allocating memory at runtime</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. Deallocating memory</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. Allocating memory in the stack</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: B</p>
+</section>
+
+<!-- Question 43 -->
+<section class="question-section">
+    <div class="question-box">What does calloc() do?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. Allocates memory and initializes it to zero</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. Allocates memory without initializing it</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. Deallocates memory</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. Allocates memory in the stack</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: A</p>
+</section>
+
+<!-- Question 44 -->
+<section class="question-section">
+    <div class="question-box">What is the difference between malloc() and calloc()?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. malloc() allocates memory without initializing it, while calloc() allocates memory and initializes it to zero</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. malloc() allocates memory and initializes it to zero, while calloc() allocates memory without initializing it</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. malloc() deallocates memory, while calloc() allocates memory</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. There is no difference</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: A</p>
+</section>
+
+<!-- Question 45 -->
+<section class="question-section">
+    <div class="question-box">What happens when free() is used?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. Allocates memory</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. Deallocates memory</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. Initializes memory to zero</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. Allocates memory in the stack</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: B</p>
+</section>
+
+<!-- Question 46 -->
+<section class="question-section">
+    <div class="question-box">What is a memory leak?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. Allocating memory without freeing it</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. Freeing memory without allocating it</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. Allocating memory in the stack</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. Allocating memory in the register</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: A</p>
+</section>
+
+<!-- Question 47 -->
+<section class="question-section">
+    <div class="question-box">How do you avoid memory leaks?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. By not using dynamic memory allocation</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. By freeing allocated memory</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. By using static memory allocation</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. By using automatic memory allocation</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: B</p>
+</section>
+
+<!-- Question 48 -->
+<section class="question-section">
+    <div class="question-box">What is realloc()?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. A function to allocate memory</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. A function to deallocate memory</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. A function to reallocate memory</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. A function to initialize memory</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: C</p>
+</section>
+
+<!-- Question 49 -->
+<section class="question-section">
+    <div class="question-box">Can you change the size of allocated memory?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. Yes, using realloc()</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. No, once allocated the size cannot be changed</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. Yes, using malloc()</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. Yes, using calloc()</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: A</p>
+</section>
+
+<!-- Question 50 -->
+<section class="question-section">
+    <div class="question-box">What is segmentation fault?</div>
+    <div class="options">
+        <button class="option" onclick="checkAnswer(this, 'A')">A. An error caused by accessing memory that is not allocated</button>
+        <button class="option" onclick="checkAnswer(this, 'B')">B. An error caused by freeing memory</button>
+        <button class="option" onclick="checkAnswer(this, 'C')">C. An error caused by allocating memory</button>
+        <button class="option" onclick="checkAnswer(this, 'D')">D. An error caused by initializing memory</button>
+    </div>
+    <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+    <p class="correct-answer hidden">Correct Answer: A</p>
+</section>
+
+    <script src="/script/quiz.js"></script>
+</body>
+</html>

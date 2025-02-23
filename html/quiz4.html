@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="/css/quiz.css">
+    <link rel="icon" type=""image/png" href="/assets/logo.png">
+</head>
+<body>
+    <div class="quiz-container">
+        <!-- Seating Arrangements Questions -->
+        <section class="question-section">
+            <div class="question-box">Five people are sitting in a row. A is to the left of B, but not next to C. D is to the right of E, who is to the left of C. Who is sitting in the middle?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) A</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) B</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) C</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) D</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">Seven people are sitting around a circular table. A is between B and C. D is between E and F. G is to the left of B. Who is sitting opposite to A?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) D</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) E</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) F</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) G</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: D</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">Six friends are sitting in a circle facing the center. P is between Q and S. R is between T and U. Q is not next to T. Who is sitting to the immediate right of P?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) Q</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) S</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) R</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) T</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">A, B, C, D, and E are sitting on a bench. B is between A and C. A is not next to D. E is not next to C. D is to the left of E. Who are at the extremes?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) A and C</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) D and E</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) A and D</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) C and E</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">Eight people are sitting around a square table, two on each side. A and B are on the same side. C is opposite to A. D is next to B. E is next to C. F is opposite to D. G is not next to E. H is not next to F. Who is sitting opposite to B?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) E</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) F</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) G</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) H</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: H</p>
+        </section>
+
+        <!-- Series Questions -->
+        <section class="question-section">
+            <div class="question-box">2, 6, 12, 20, 30, ?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 40</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 42</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 44</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 46</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">1, 4, 9, 16, 25, ?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 30</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 35</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 36</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 40</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">3, 8, 15, 24, 35, ?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 46</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 48</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 50</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 52</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">2, 5, 10, 17, 26, ?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 35</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 37</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 40</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 42</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">1, 3, 7, 15, 31, ?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 62</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 63</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 64</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 65</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <!-- Percentages Questions -->
+        <section class="question-section">
+            <div class="question-box">20% of 500 is?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 50</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 100</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 150</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 200</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">If 120 is 80% of a number, then the number is?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 140</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 150</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 160</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 180</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">What percentage is 25 of 100?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 25%</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 50%</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 75%</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 100%</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">A shopkeeper sells an item for ₹100, making a profit of 20%. What was the cost price?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) ₹80</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) ₹83.33</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) ₹90</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) ₹120</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">If the price of sugar is increased by 25%, then by what percent must a person reduce his consumption so that there is no increase in his expenditure?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 20%</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 25%</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 30%</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 33.33%</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Allegations and Mixtures Questions -->
+        <section class="question-section">
+            <div class="question-box">In what ratio must a grocer mix two varieties of pulses costing ₹15 and ₹20 per kg respectively, so as to have a mixture costing ₹18 per kg?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 2:3</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 3:2</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 1:2</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 2:1</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">How many liters of water should be added to 10 liters of milk costing ₹60 per liter so that the cost of the mixture becomes ₹40 per liter?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 5 liters</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 10 liters</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 15 liters</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 20 liters</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">A mixture contains alcohol and water in the ratio 3:2. If 5 liters of water is added to the mixture, the ratio becomes 2:3. Find the quantity of alcohol in the original mixture.</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 10 liters</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 12 liters</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 15 liters</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 18 liters</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">Two vessels contain milk and water in the ratio 3:1 and 2:3. In what ratio should these be mixed to form a new mixture containing milk and water in the ratio 1:1?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 1:2</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 2:1</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 1:3</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 3:1</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">A merchant has 1000 kg of sugar, part of which he sells at 8% profit and the rest at 18% profit. He gains 14% on the whole. The quantity sold at 18% profit is:</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 560 kg</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 600 kg</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 400 kg</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 640 kg</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <!-- Probability Questions -->
+        <section class="question-section">
+            <div class="question-box">A bag contains 5 red and 3 blue balls. What is the probability of drawing a red ball?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 3/8</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 5/8</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 3/5</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 5/3</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">Two dice are thrown. What is the probability of getting a sum of 7?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 1/6</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 5/6</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 1/36</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 1/12</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">A card is drawn from a pack of 52 cards. What is the probability of getting an ace?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 1/13</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 1/4</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 4/13</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 3/13</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">What is the probability of getting at least one head when two coins are tossed?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 1/4</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 1/2</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 3/4</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 1</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">A bag contains 4 white, 5 red and 6 blue balls. Three balls are drawn at random. The probability that all of them are red is:</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 1/22</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 3/22</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 1/11</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 2/11</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Ratios and Proportions Questions -->
+        <section class="question-section">
+            <div class="question-box">If a:b = 2:3 and b:c = 4:5, then a:c is?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 8:15</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 6:10</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 2:5</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 4:5</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">The ratio of boys and girls in a school is 5:3. If there are 800 students in the school, then the number of boys is?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 300</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 500</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 600</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 400</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">Divide ₹6000 between A and B in the ratio 2:3.</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) ₹2000, ₹4000</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) ₹3000, ₹3000</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) ₹2400, ₹3600</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) ₹1200, ₹4800</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">If 4 men or 6 women can do a piece of work in 20 days, then 8 men and 9 women can do the same work in:</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 8 days</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 10 days</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 12 days</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 16 days</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">The incomes of A and B are in the ratio 3:2 and their expenditures in the ratio 5:3. If each saves ₹1000, then B's income is:</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) ₹2000</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) ₹3000</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) ₹4000</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) ₹6000</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <!-- Averages Questions -->
+        <section class="question-section">
+            <div class="question-box">The average of 5 numbers is 20. If one number is excluded, their average becomes 15. The excluded number is?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 25</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 30</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 35</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 40</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">The average age of a family of 4 members is 25 years. If the present age of the youngest member being 15 years is excluded, the average age of the remaining members is:</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 20 years</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 25 years</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 30 years</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 35 years</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">The average of nine numbers is 50. The average of the first five numbers is 54 and that of the last three numbers is 52. The sixth number is:</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 34</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 44</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 54</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 64</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">The average weight of 8 persons increases by 1.5 kg when a new person comes in place of one of them weighing 65 kg. The weight of the new person is:</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 75 kg</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 76 kg</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 77 kg</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 78 kg</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">A cricketer scored 50 runs in his first innings, 60 in the second, and 70 in the third. What is his average score?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 55</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 60</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 65</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 70</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <!-- Work and Time Questions -->
+        <section class="question-section">
+            <div class="question-box">A can do a piece of work in 10 days and B can do it in 15 days. In how many days can they together complete the work?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 5 days</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 6 days</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 8 days</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 10 days</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">A and B can complete a task in 12 days. B and C can complete the same task in 15 days. A and C can complete it in 20 days. How many days will A alone take to complete the task?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 10 days</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 20 days</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 30 days</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 40 days</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">If 10 men can do a piece of work in 12 days, how many men are required to do the same work in 8 days?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 12</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 15</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 18</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 20</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">Two pipes A and B can fill a tank in 12 hours and 15 hours respectively. If both pipes are opened together, how long will it take to fill the tank?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 6 hours</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 6 2/3 hours</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 7 hours</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 7 1/2 hours</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <!-- Speed, Time, and Distance Questions -->
+        <section class="question-section">
+            <div class="question-box">A car travels at a speed of 60 km/hr. How much distance will it cover in 3 hours?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 120 km</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 180 km</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 240 km</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 300 km</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">A train travels a distance of 300 km in 5 hours. What is its speed?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 50 km/hr</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 60 km/hr</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 70 km/hr</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 80 km/hr</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">A person walks at a speed of 4 km/hr and reaches his destination in 6 hours. If he wants to reach in 4 hours, what should be his speed?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 5 km/hr</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 6 km/hr</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 7 km/hr</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 8 km/hr</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">Two trains are running in opposite directions at the speeds of 60 km/hr and 40 km/hr. What is the relative speed of the trains?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 20 km/hr</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 100 km/hr</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 120 km/hr</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 2400 km/hr</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">A car covers a distance of 150 km in 3 hours and another car covers the same distance in 5 hours. The difference in their speeds is:</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 20 km/hr</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 30 km/hr</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 40 km/hr</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 50 km/hr</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Geometry Questions -->
+        <section class="question-section">
+            <div class="question-box">The area of a square is 64 sq cm. What is the length of its side?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 4 cm</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 8 cm</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 12 cm</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 16 cm</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">The length of a rectangle is 10 cm and its breadth is 5 cm. What is its perimeter?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 15 cm</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 20 cm</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 30 cm</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 50 cm</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">The radius of a circle is 7 cm. What is its circumference? (Use π = 22/7)</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 22 cm</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 44 cm</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 88 cm</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 154 cm</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">The area of a triangle is 24 sq cm and its base is 8 cm. What is its height?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 3 cm</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 4 cm</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 6 cm</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 8 cm</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">The volume of a cube is 27 cubic cm. What is the length of its edge?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A) 3 cm</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B) 9 cm</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C) 27 cm</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D) 81 cm</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+    </div>
+
+    <script src="/script/quiz.js"></script>
+</body>
+</html>

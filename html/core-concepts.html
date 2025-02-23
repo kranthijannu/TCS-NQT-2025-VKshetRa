@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Handbook</title>
+    <link rel="icon" type=""image/png" href="/assets/logo.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: auto;
+            max-width: 1000px;
+            padding: 30px;
+            background-color: #f9f9f9;
+        }
+        h1 { 
+            color: #2c3e50; 
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #3498db;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #2c3e50;
+            margin-top: 20px;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        pre {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        .note {
+            background: #e8f4ff;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            margin: 20px 0;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        footer {
+    background-color: #333; /* Change this color as needed */
+    color: white; /* Text color */
+    text-align: center;
+    padding: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Core Concepts in Programming</h1>
+
+    <!-- Pointers Section -->
+    <h2>1. Pointers</h2>
+    <p><strong>Definition:</strong> A pointer stores the memory address of another variable.</p>
+    <h3>Key Concepts</h3>
+    <pre><code>int *ptr;       // Declaration
+int num = 10;
+ptr = &num;    // Initialization
+printf("%d", *ptr); // Dereferencing</code></pre>
+    <div class="note">
+        <strong>Best Practices:</strong> Use <code>free()</code> after dynamic allocation.
+    </div>
+
+    <!-- Memory Management Section -->
+    <h2>2. Memory Management</h2>
+    <pre><code>int *arr = (int*)malloc(5 * sizeof(int)); // Heap allocation
+free(arr); // Deallocation</code></pre>
+    <h3>Memory Segments</h3>
+    <ul>
+        <li>Stack: Local variables</li>
+        <li>Heap: Dynamic memory</li>
+    </ul>
+
+    <!-- Inbuilt Libraries Section -->
+    <h2>3. Inbuilt C Libraries</h2>
+    <ul>
+        <li><strong>stdio.h</strong>: <code>printf()</code>, <code>scanf()</code></li>
+        <li><strong>stdlib.h</strong>: <code>malloc()</code>, <code>free()</code></li>
+    </ul>
+
+    <!-- Call by Value/Reference Section -->
+    <h2>4. Call by Value vs. Call by Reference</h2>
+    <table>
+        <tr><th>Call by Value</th><th>Call by Reference</th></tr>
+        <tr><td>Copies data</td><td>Uses pointers</td></tr>
+        <tr><td>No side effects</td><td>Modifies original data</td></tr>
+    </table>
+
+    <!-- Recursion Section -->
+    <h2>5. Recursion</h2>
+    <pre><code>int factorial(int n) {
+    if (n == 0) return 1;
+    return n * factorial(n-1);
+}</code></pre>
+
+    <!-- Iteration Section -->
+    <h2>6. Iteration</h2>
+    <pre><code>int factorial(int n) {
+    int result = 1;
+    for (int i=1; i<=n; i++) 
+        result *= i;
+    return result;
+}</code></pre>
+
+    <!-- Recursion vs. Iteration Table -->
+    <h2>7. Recursion vs. Iteration</h2>
+    <table>
+        <tr><th>Factor</th><th>Recursion</th><th>Iteration</th></tr>
+        <tr><td>Memory</td><td>Uses stack</td><td>Efficient</td></tr>
+        <tr><td>Use Case</td><td>Tree traversal</td><td>Large data</td></tr>
+    </table>
+
+    <!-- Summary Section -->
+    <h2>Summary Cheat Sheet</h2>
+    <div class="note">
+        <p><strong>Pointers:</strong> Use <code>*</code> and <code>&</code>.</p>
+        <p><strong>Memory:</strong> Always free heap memory.</p>
+        <p><strong>Recursion:</strong> Define a base case.</p>
+    </div>
+    <footer>
+        <p> 
+        By  VKshetRa </p>
+    </footer>
+</body>
+</html>

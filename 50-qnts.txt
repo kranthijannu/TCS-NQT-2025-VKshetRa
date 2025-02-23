@@ -1,0 +1,58 @@
+50 Coding Questions
+Operators: Write a program to calculate the area of a rectangle using operators.
+Looping Statements: Write a program that prints numbers from 1 to 100 using a for loop.
+Object-Oriented Programming (OOPS): Create a class Person with attributes like name and age, and a method to display the details.
+Functions: Write a function to calculate the factorial of a number.
+Recursion: Write a recursive function to compute the nth Fibonacci number.
+Algorithms: Implement the binary search algorithm.
+Arrays: Write a program to find the largest number in an array.
+Control Statements: Write a program using if-else statements to check if a number is even or odd.
+Strings: Write a function to reverse a string.
+Linked List: Implement a singly linked list and write methods to insert and display elements.
+Stack: Implement a stack using an array.
+Queue: Implement a queue using linked list.
+Trees: Implement a binary tree and perform in-order traversal.
+Graphs: Write a program to represent a graph using an adjacency list.
+Matrix Operations: Write a function to add two matrices.
+Set Theory: Write a program to find the union of two sets.
+String Operations: Write a function to check if a string is a palindrome.
+Number Series: Write a program to generate the first n numbers of the Fibonacci series.
+Pattern Series: Write a program to print the following pattern:
+markdown
+Copy code
+*
+**
+***
+****
+*****
+Shortest Path Calculation Logic: Implement Dijkstra’s algorithm for finding the shortest path in a graph.
+Area, Shapes & Perimeter: Write a program to calculate the area of a circle.
+Numbers and Decimal Fractions: Write a program to convert a decimal number to binary.
+Operators: Write a program that performs addition, subtraction, multiplication, and division using a menu-driven system.
+Looping Statements: Write a program to print the multiplication table of a number.
+Object-Oriented Programming (OOPS): Create a class Car with methods for starting and stopping the car.
+Functions: Write a function that returns the greater of two numbers.
+Recursion: Write a recursive function to find the power of a number.
+Algorithms: Implement a linear search algorithm.
+Arrays: Write a function to find the second largest element in an array.
+Control Statements: Write a program to find the largest of three numbers.
+Strings: Write a program to count the frequency of each character in a string.
+Linked List: Implement a doubly linked list and reverse the list.
+Stack: Implement a stack with push, pop, and peek operations.
+Queue: Implement a circular queue.
+Trees: Write a function to find the height of a binary tree.
+Graphs: Implement depth-first search (DFS) in a graph.
+Matrix Operations: Write a function to multiply two matrices.
+Set Theory: Write a program to find the intersection of two sets.
+String Operations: Write a function to count vowels in a string.
+Number Series: Write a program to find the sum of the first n natural numbers.
+Pattern Series: Write a program to print a pyramid pattern of stars.
+Shortest Path Calculation Logic: Implement the Bellman-Ford algorithm for shortest path calculation.
+Area, Shapes & Perimeter: Write a program to calculate the perimeter of a rectangle.
+Numbers and Decimal Fractions: Write a program to convert a binary number to decimal.
+Operators: Write a program to swap two numbers using operators.
+Looping Statements: Write a program to calculate the sum of digits of a number.
+Object-Oriented Programming (OOPS): Create a class Student with attributes for name, roll_number, and marks, and a method to display the student's details.
+Functions: Write a function to check if a number is prime.
+Recursion: Write a recursive function to reverse a string.
+Algorithms: Implement the selection sort algorithm.

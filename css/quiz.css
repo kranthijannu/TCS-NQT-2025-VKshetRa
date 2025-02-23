@@ -1,0 +1,120 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0b0c1b;
+    color: #ffffff;
+    padding: 2rem;
+    text-align: center;
+}
+
+.quiz-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Question Section */
+.question-section {
+    background: #1a1a2e;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 8px rgba(255, 140, 0, 0.5);
+    transition: transform 0.2s;
+}
+
+.question-section:hover {
+    transform: translateY(-4px);
+}
+
+.question-box {
+    font-size: 1.3rem;
+    color: #ffdd57;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+/* Options Grid */
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.option {
+    padding: 1rem;
+    border: 2px solid #ffdd57;
+    border-radius: 8px;
+    background: #141e30;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 1rem;
+    color: #ffdd57;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.option:hover {
+    background: #ffdd57;
+    color: #1a1a2e;
+}
+
+.option.correct {
+    background: #4CAF50 !important;
+    color: white;
+    border-color: #45a049;
+}
+
+.option.wrong {
+    background: #f44336 !important;
+    color: white;
+    border-color: #d32f2f;
+}
+
+/* See Answer Button */
+.see-answer {
+    background: #ff4081;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.see-answer:hover {
+    background: #ff1053;
+}
+
+/* Answer Display */
+.correct-answer {
+    color: #4CAF50;
+    font-weight: bold;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+    display: none;
+    text-transform: uppercase;
+}
+
+.correct-answer.show {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .options {
+        grid-template-columns: 1fr;
+    }
+}

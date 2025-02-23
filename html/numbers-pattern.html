@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Number Series Concepts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        p, ul {
+            line-height: 1.6;
+        }
+        .code-box {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Understanding Number Series Concepts</h1>
+        
+        <h2>Types of Series</h2>
+        <p>Number series can be categorized into different types, including:</p>
+        <ul>
+            <li><b>Arithmetic Progression (AP):</b> A sequence where the difference between consecutive terms is constant.</li>
+            <div class="code-box">
+                def arithmetic_series(a, d, n):
+                    return [a + i * d for i in range(n)]
+                print(arithmetic_series(2, 3, 10))
+            </div>
+            <li><b>Geometric Progression (GP):</b> A sequence where each term is obtained by multiplying the previous term by a fixed ratio.</li>
+            <div class="code-box">
+                def geometric_series(a, r, n):
+                    return [a * (r ** i) for i in range(n)]
+                print(geometric_series(2, 3, 10))
+            </div>
+            <li><b>Fibonacci Series:</b> A sequence where each term is the sum of the two preceding ones.</li>
+            <div class="code-box">
+                def fibonacci(n):
+                    series = [0, 1]
+                    for _ in range(n-2):
+                        series.append(series[-1] + series[-2])
+                    return series
+                print(fibonacci(10))
+            </div>
+            <li><b>Prime Number Series:</b> A sequence consisting of prime numbers.</li>
+            <div class="code-box">
+                def is_prime(n):
+                    if n < 2:
+                        return False
+                    for i in range(2, int(n**0.5) + 1):
+                        if n % i == 0:
+                            return False
+                    return True
+                def prime_series(n):
+                    primes, num = [], 2
+                    while len(primes) < n:
+                        if is_prime(num):
+                            primes.append(num)
+                        num += 1
+                    return primes
+                print(prime_series(10))
+            </div>
+            <li><b>Square & Cube Series:</b> A sequence based on squares or cubes of natural numbers.</li>
+            <div class="code-box">
+                def square_series(n):
+                    return [i ** 2 for i in range(1, n+1)]
+                def cube_series(n):
+                    return [i ** 3 for i in range(1, n+1)]
+                print(square_series(10))
+                print(cube_series(10))
+            </div>
+        </ul>
+        
+        <h2>Practice Problems</h2>
+        <ul>
+            <li>Generate Fibonacci up to 'n' terms.</li>
+            <li>Print a <b>pyramid pattern</b> of numbers.</li>
+            <li>Find the missing term in <b>2, 4, 8, ?, 32</b>.</li>
+            <li>Print <b>Pascal’s Triangle</b>.</li>
+            <li>Generate a <b>prime number series</b>.</li>
+        </ul>
+        
+        <div class="footer">
+            <p>Page designed by VKshetRa</p>
+        </div>
+    </div>
+</body>
+</html>

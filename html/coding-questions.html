@@ -1,0 +1,3214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Question Solutions</title>
+    <link rel="stylesheet" href="/css/coding-questions.css">
+    <link rel="icon" type="image/png" href="/assets/logo.png">
+</head>
+<body>
+
+    <header>
+        <h1>Coding Question Solutions</h1>
+        <p>Learn how to solve coding problems with various approaches.</p>
+    </header>
+
+    <section id="problem-1" class="problem-section">
+        <h2>1. Find Maximum Number in a List</h2>
+        <p>Write a program to calculate the area of a rectangle using operators.</p>
+
+        <div class="solution">
+            <h3>Approach 1: Using the basic multiplication operator</h3>
+            <pre>
+                # Function to calculate area of rectangle
+                def area_of_rectangle(length, width):
+                    return length * width
+                
+                # Example usage
+                length = 5
+                width = 3
+                print("Area of Rectangle:", area_of_rectangle(length, width))
+                
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2:  Using Assignment Operator</h3>
+            <pre>
+                # Function to calculate area using the assignment operator
+                def area_of_rectangle(length, width):
+                    area = length
+                    area *= width  # Using the assignment operator
+                    return area
+                
+                # Example usage
+                length = 5
+                width = 3
+                print("Area of Rectangle:", area_of_rectangle(length, width))
+                
+            </pre>
+        </div>
+
+
+    </section>
+
+    <section id="problem-2" class="problem-section">
+        <h2>2. Write a program that prints numbers from 1 to 100 using a for loop.</h2>
+        <!-- <p>Write a program that checks if a given string is a palindrome.</p> -->
+
+        <div class="solution">
+            <h3>Approach 1: Using Python's String Slicing</h3>
+            <pre>
+                for i in range(1, 101):
+                print(i)
+            </pre>
+        </div>
+
+    </section>
+<section id="problem-3" class="problem-section">
+        <h2>3. Object-Oriented Programming (OOPS): Create a class Person with attributes like name and age, and a method to display the details.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Basic Class Implementation</h3>
+            <pre>
+                class Person:
+                    def __init__(self, name, age):
+                        self.name = name
+                        self.age = age
+
+                    def display_details(self):
+                        print(f"Name: {self.name}, Age: {self.age}")
+
+                # Example usage
+                person1 = Person("Alice", 30)
+                person1.display_details()
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using String Formatting</h3>
+            <pre>
+                class Person:
+                    def __init__(self, name, age):
+                        self.name = name
+                        self.age = age
+
+                    def display_details(self):
+                        print("Name:", self.name)
+                        print("Age:", self.age)
+
+                # Example usage
+                person2 = Person("Bob", 25)
+                person2.display_details()
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Detailed String Representation</h3>
+            <pre>
+                class Person:
+                    def __init__(self, name, age):
+                        self.name = name
+                        self.age = age
+
+                    def display_details(self):
+                        details = f"Person [Name: {self.name}, Age: {self.age}]"
+                        print(details)
+
+                # Example usage
+                person3 = Person("Charlie", 40)
+                person3.display_details()
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-4" class="problem-section">
+        <h2>4. Functions: Write a function to calculate the factorial of a number.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Using Iteration</h3>
+            <pre>
+                def factorial(n):
+                    if n == 0:
+                        return 1
+                    result = 1
+                    for i in range(1, n + 1):
+                        result *= i
+                    return result
+
+                # Example usage
+                print(factorial(5))  # Output: 120
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using While Loop</h3>
+            <pre>
+                def factorial(n):
+                    result = 1
+                    while n > 0:
+                        result *= n
+                        n -= 1
+                    return result
+
+                # Example usage
+                print(factorial(6))  # Output: 720
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using Recursion</h3>
+            <pre>
+                def factorial(n):
+                    if n == 0 or n == 1:
+                        return 1
+                    else:
+                        return n * factorial(n - 1)
+
+                # Example usage
+                print(factorial(7))  # Output: 5040
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-5" class="problem-section">
+        <h2>5. Recursion: Write a recursive function to compute the nth Fibonacci number.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Basic Recursive Function</h3>
+            <pre>
+                def fibonacci(n):
+                    if n <= 0:
+                        return 0
+                    elif n == 1:
+                        return 1
+                    else:
+                        return fibonacci(n - 1) + fibonacci(n - 2)
+
+                # Example usage
+                print(fibonacci(10))  # Output: 55
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using Memoization</h3>
+            <pre>
+                def fibonacci(n, memo={}):
+                    if n in memo:
+                        return memo[n]
+                    if n <= 0:
+                        return 0
+                    elif n == 1:
+                        return 1
+                    else:
+                        memo[n] = fibonacci(n - 1, memo) + fibonacci(n - 2, memo)
+                        return memo[n]
+
+                # Example usage
+                print(fibonacci(10))  # Output: 55
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using Iteration</h3>
+            <pre>
+                def fibonacci(n):
+                    if n <= 0:
+                        return 0
+                    elif n == 1:
+                        return 1
+                    a, b = 0, 1
+                    for _ in range(2, n + 1):
+                        a, b = b, a + b
+                    return b
+
+                # Example usage
+                print(fibonacci(10))  # Output: 55
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-6" class="problem-section">
+        <h2>6. Algorithms: Implement the binary search algorithm.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Iterative Binary Search</h3>
+            <pre>
+                def binary_search(arr, x):
+                    low = 0
+                    high = len(arr) - 1
+                    mid = 0
+
+                    while low <= high:
+                        mid = (high + low) // 2
+
+                        if arr[mid] < x:
+                            low = mid + 1
+                        elif arr[mid] > x:
+                            high = mid - 1
+                        else:
+                            return mid
+                    return -1
+
+                # Example usage
+                arr = [2, 3, 4, 10, 40]
+                x = 10
+                result = binary_search(arr, x)
+                print("Element is present at index", result)  # Output: Element is present at index 3
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Recursive Binary Search</h3>
+            <pre>
+                def binary_search(arr, low, high, x):
+                    if high >= low:
+                        mid = (high + low) // 2
+
+                        if arr[mid] == x:
+                            return mid
+                        elif arr[mid] > x:
+                            return binary_search(arr, low, mid - 1, x)
+                        else:
+                            return binary_search(arr, mid + 1, high, x)
+                    else:
+                        return -1
+
+                # Example usage
+                arr = [2, 3, 4, 10, 40]
+                x = 10
+                result = binary_search(arr, 0, len(arr) - 1, x)
+                print("Element is present at index", result)  # Output: Element is present at index 3
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using Python's bisect module</h3>
+            <pre>
+                import bisect
+
+                def binary_search(arr, x):
+                    index = bisect.bisect_left(arr, x)
+                    if index != len(arr) and arr[index] == x:
+                        return index
+                    return -1
+
+                # Example usage
+                arr = [2, 3, 4, 10, 40]
+                x = 10
+                result = binary_search(arr, x)
+                print("Element is present at index", result)  # Output: Element is present at index 3
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-7" class="problem-section">
+        <h2>7. Arrays: Write a program to find the largest number in an array.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Using a for loop</h3>
+            <pre>
+                def find_largest(arr):
+                    largest = arr[0]
+                    for num in arr:
+                        if num > largest:
+                            largest = num
+                    return largest
+
+                # Example usage
+                arr = [3, 5, 7, 2, 8]
+                print("Largest number in the array:", find_largest(arr))  # Output: 8
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using Python's built-in max() function</h3>
+            <pre>
+                def find_largest(arr):
+                    return max(arr)
+
+                # Example usage
+                arr = [3, 5, 7, 2, 8]
+                print("Largest number in the array:", find_largest(arr))  # Output: 8
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using sorting</h3>
+            <pre>
+                def find_largest(arr):
+                    arr.sort()
+                    return arr[-1]
+
+                # Example usage
+                arr = [3, 5, 7, 2, 8]
+                print("Largest number in the array:", find_largest(arr))  # Output: 8
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-8" class="problem-section">
+        <h2>8. Control Statements: Write a program using if-else statements to check if a number is even or odd.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Using modulo operator</h3>
+            <pre>
+                def check_even_odd(num):
+                    if num % 2 == 0:
+                        return "Even"
+                    else:
+                        return "Odd"
+
+                # Example usage
+                num = 4
+                print(f"{num} is {check_even_odd(num)}")  # Output: 4 is Even
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using bitwise operator</h3>
+            <pre>
+                def check_even_odd(num):
+                    if num & 1 == 0:
+                        return "Even"
+                    else:
+                        return "Odd"
+
+                # Example usage
+                num = 7
+                print(f"{num} is {check_even_odd(num)}")  # Output: 7 is Odd
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using ternary operator</h3>
+            <pre>
+                def check_even_odd(num):
+                    return "Even" if num % 2 == 0 else "Odd"
+
+                # Example usage
+                num = 10
+                print(f"{num} is {check_even_odd(num)}")  # Output: 10 is Even
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-9" class="problem-section">
+        <h2>9. Strings: Write a function to reverse a string.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Using slicing</h3>
+            <pre>
+                def reverse_string(s):
+                    return s[::-1]
+
+                # Example usage
+                s = "hello"
+                print("Reversed string:", reverse_string(s))  # Output: olleh
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using a loop</h3>
+            <pre>
+                def reverse_string(s):
+                    reversed_s = ""
+                    for char in s:
+                        reversed_s = char + reversed_s
+                    return reversed_s
+
+                # Example usage
+                s = "world"
+                print("Reversed string:", reverse_string(s))  # Output: dlrow
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using the join() method and reversed() function</h3>
+            <pre>
+                def reverse_string(s):
+                    return ''.join(reversed(s))
+
+                # Example usage
+                s = "python"
+                print("Reversed string:", reverse_string(s))  # Output: nohtyp
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-10" class="problem-section">
+        <h2>10. Linked List: Implement a singly linked list and write methods to insert and display elements.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Basic Singly Linked List Implementation</h3>
+            <pre>
+                class Node:
+                    def __init__(self, data):
+                        self.data = data
+                        self.next = None
+
+                class LinkedList:
+                    def __init__(self):
+                        self.head = None
+
+                    def insert(self, data):
+                        new_node = Node(data)
+                        new_node.next = self.head
+                        self.head = new_node
+
+                    def display(self):
+                        current = self.head
+                        while current:
+                            print(current.data, end=" -> ")
+                            current = current.next
+                        print("None")
+
+                # Example usage
+                ll = LinkedList()
+                ll.insert(3)
+                ll.insert(2)
+                ll.insert(1)
+                ll.display()  # Output: 1 -> 2 -> 3 -> None
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Insert at the End</h3>
+            <pre>
+                class Node:
+                    def __init__(self, data):
+                        self.data = data
+                        self.next = None
+
+                class LinkedList:
+                    def __init__(self):
+                        self.head = None
+
+                    def insert(self, data):
+                        new_node = Node(data)
+                        if self.head is None:
+                            self.head = new_node
+                        else:
+                            current = self.head
+                            while current.next:
+                                current = current.next
+                            current.next = new_node
+
+                    def display(self):
+                        current = self.head
+                        while current:
+                            print(current.data, end=" -> ")
+                            current = current.next
+                        print("None")
+
+                # Example usage
+                ll = LinkedList()
+                ll.insert(1)
+                ll.insert(2)
+                ll.insert(3)
+                ll.display()  # Output: 1 -> 2 -> 3 -> None
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Insert in Sorted Order</h3>
+            <pre>
+                class Node:
+                    def __init__(self, data):
+                        self.data = data
+                        self.next = None
+
+                class LinkedList:
+                    def __init__(self):
+                        self.head = None
+
+                    def insert(self, data):
+                        new_node = Node(data)
+                        if self.head is None or self.head.data >= new_node.data:
+                            new_node.next = self.head
+                            self.head = new_node
+                        else:
+                            current = self.head
+                            while current.next and current.next.data < new_node.data:
+                                current = current.next
+                            new_node.next = current.next
+                            current.next = new_node
+
+                    def display(self):
+                        current = self.head
+                        while current:
+                            print(current.data, end=" -> ")
+                            current = current.next
+                        print("None")
+
+                # Example usage
+                ll = LinkedList()
+                ll.insert(2)
+                ll.insert(1)
+                ll.insert(3)
+                ll.display()  # Output: 1 -> 2 -> 3 -> None
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-11" class="problem-section">
+        <h2>11. Stack: Implement a stack using an array.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Basic Stack Implementation</h3>
+            <pre>
+                class Stack:
+                    def __init__(self):
+                        self.stack = []
+
+                    def push(self, item):
+                        self.stack.append(item)
+
+                    def pop(self):
+                        if not self.is_empty():
+                            return self.stack.pop()
+                        return None
+
+                    def is_empty(self):
+                        return len(self.stack) == 0
+
+                    def peek(self):
+                        if not self.is_empty():
+                            return self.stack[-1]
+                        return None
+
+                    def display(self):
+                        print(self.stack)
+
+                # Example usage
+                stack = Stack()
+                stack.push(1)
+                stack.push(2)
+                stack.push(3)
+                stack.display()  # Output: [1, 2, 3]
+                stack.pop()
+                stack.display()  # Output: [1, 2]
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Stack with Size Limit</h3>
+            <pre>
+                class Stack:
+                    def __init__(self, limit=10):
+                        self.stack = []
+                        self.limit = limit
+
+                    def push(self, item):
+                        if len(self.stack) < self.limit:
+                            self.stack.append(item)
+                        else:
+                            print("Stack overflow")
+
+                    def pop(self):
+                        if not self.is_empty():
+                            return self.stack.pop()
+                        return None
+
+                    def is_empty(self):
+                        return len(self.stack) == 0
+
+                    def peek(self):
+                        if not self.is_empty():
+                            return self.stack[-1]
+                        return None
+
+                    def display(self):
+                        print(self.stack)
+
+                # Example usage
+                stack = Stack(limit=3)
+                stack.push(1)
+                stack.push(2)
+                stack.push(3)
+                stack.push(4)  # Output: Stack overflow
+                stack.display()  # Output: [1, 2, 3]
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Stack with Minimum Element Retrieval</h3>
+            <pre>
+                class Stack:
+                    def __init__(self):
+                        self.stack = []
+                        self.min_stack = []
+
+                    def push(self, item):
+                        self.stack.append(item)
+                        if not self.min_stack or item <= self.min_stack[-1]:
+                            self.min_stack.append(item)
+
+                    def pop(self):
+                        if not self.is_empty():
+                            item = self.stack.pop()
+                            if item == self.min_stack[-1]:
+                                self.min_stack.pop()
+                            return item
+                        return None
+
+                    def is_empty(self):
+                        return len(self.stack) == 0
+
+                    def peek(self):
+                        if not self.is_empty():
+                            return self.stack[-1]
+                        return None
+
+                    def get_min(self):
+                        if not self.is_empty():
+                            return self.min_stack[-1]
+                        return None
+
+                    def display(self):
+                        print(self.stack)
+
+                # Example usage
+                stack = Stack()
+                stack.push(3)
+                stack.push(5)
+                stack.push(2)
+                stack.push(1)
+                stack.display()  # Output: [3, 5, 2, 1]
+                print("Minimum element:", stack.get_min())  # Output: Minimum element: 1
+                stack.pop()
+                stack.display()  # Output: [3, 5, 2]
+                print("Minimum element:", stack.get_min())  # Output: Minimum element: 2
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-12" class="problem-section">
+        <h2>12. Queue: Implement a queue using linked list.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Basic Queue Implementation</h3>
+            <pre>
+                class Node:
+                    def __init__(self, data):
+                        self.data = data
+                        self.next = None
+
+                class Queue:
+                    def __init__(self):
+                        self.front = None
+                        self.rear = None
+
+                    def enqueue(self, data):
+                        new_node = Node(data)
+                        if self.rear is None:
+                            self.front = self.rear = new_node
+                        else:
+                            self.rear.next = new_node
+                            self.rear = new_node
+
+                    def dequeue(self):
+                        if self.front is None:
+                            return None
+                        temp = self.front
+                        self.front = self.front.next
+                        if self.front is None:
+                            self.rear = None
+                        return temp.data
+
+                    def display(self):
+                        current = self.front
+                        while current:
+                            print(current.data, end=" -> ")
+                            current = current.next
+                        print("None")
+
+                # Example usage
+                queue = Queue()
+                queue.enqueue(1)
+                queue.enqueue(2)
+                queue.enqueue(3)
+                queue.display()  # Output: 1 -> 2 -> 3 -> None
+                queue.dequeue()
+                queue.display()  # Output: 2 -> 3 -> None
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Circular Queue</h3>
+            <pre>
+                class Node:
+                    def __init__(self, data):
+                        self.data = data
+                        self.next = None
+
+                class CircularQueue:
+                    def __init__(self):
+                        self.front = None
+                        self.rear = None
+
+                    def enqueue(self, data):
+                        new_node = Node(data)
+                        if self.rear is None:
+                            self.front = self.rear = new_node
+                            self.rear.next = self.front
+                        else:
+                            self.rear.next = new_node
+                            self.rear = new_node
+                            self.rear.next = self.front
+
+                    def dequeue(self):
+                        if self.front is None:
+                            return None
+                        if self.front == self.rear:
+                            temp = self.front
+                            self.front = self.rear = None
+                            return temp.data
+                        temp = self.front
+                        self.front = self.front.next
+                        self.rear.next = self.front
+                        return temp.data
+
+                    def display(self):
+                        if self.front is None:
+                            print("Queue is empty")
+                            return
+                        current = self.front
+                        while True:
+                            print(current.data, end=" -> ")
+                            current = current.next
+                            if current == self.front:
+                                break
+                        print("None")
+
+                # Example usage
+                queue = CircularQueue()
+                queue.enqueue(1)
+                queue.enqueue(2)
+                queue.enqueue(3)
+                queue.display()  # Output: 1 -> 2 -> 3 -> None
+                queue.dequeue()
+                queue.display()  # Output: 2 -> 3 -> None
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Queue with Size Limit</h3>
+            <pre>
+                class Node:
+                    def __init__(self, data):
+                        self.data = data
+                        self.next = None
+
+                class Queue:
+                    def __init__(self, limit=10):
+                        self.front = None
+                        self.rear = None
+                        self.size = 0
+                        self.limit = limit
+
+                    def enqueue(self, data):
+                        if self.size >= self.limit:
+                            print("Queue overflow")
+                            return
+                        new_node = Node(data)
+                        if self.rear is None:
+                            self.front = self.rear = new_node
+                        else:
+                            self.rear.next = new_node
+                            self.rear = new_node
+                        self.size += 1
+
+                    def dequeue(self):
+                        if self.front is None:
+                            return None
+                        temp = self.front
+                        self.front = self.front.next
+                        if self.front is None:
+                            self.rear = None
+                        self.size -= 1
+                        return temp.data
+
+                    def display(self):
+                        current = self.front
+                        while current:
+                            print(current.data, end=" -> ")
+                            current = current.next
+                        print("None")
+
+                # Example usage
+                queue = Queue(limit=3)
+                queue.enqueue(1)
+                queue.enqueue(2)
+                queue.enqueue(3)
+                queue.enqueue(4)  # Output: Queue overflow
+                queue.display()  # Output: 1 -> 2 -> 3 -> None
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-13" class="problem-section">
+        <h2>13. Trees: Implement a binary tree and perform in-order traversal.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Basic Binary Tree Implementation</h3>
+            <pre>
+                class Node:
+                    def __init__(self, data):
+                        self.data = data
+                        self.left = None
+                        self.right = None
+
+                class BinaryTree:
+                    def __init__(self):
+                        self.root = None
+
+                    def insert(self, data):
+                        if self.root is None:
+                            self.root = Node(data)
+                        else:
+                            self._insert(self.root, data)
+
+                    def _insert(self, node, data):
+                        if data < node.data:
+                            if node.left is None:
+                                node.left = Node(data)
+                            else:
+                                self._insert(node.left, data)
+                        else:
+                            if node.right is None:
+                                node.right = Node(data)
+                            else:
+                                self._insert(node.right, data)
+
+                    def in_order_traversal(self):
+                        self._in_order_traversal(self.root)
+
+                    def _in_order_traversal(self, node):
+                        if node:
+                            self._in_order_traversal(node.left)
+                            print(node.data, end=" ")
+                            self._in_order_traversal(node.right)
+
+                # Example usage
+                bt = BinaryTree()
+                bt.insert(5)
+                bt.insert(3)
+                bt.insert(7)
+                bt.insert(2)
+                bt.insert(4)
+                bt.insert(6)
+                bt.insert(8)
+                bt.in_order_traversal()  # Output: 2 3 4 5 6 7 8
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: In-Order Traversal Using Stack</h3>
+            <pre>
+                class Node:
+                    def __init__(self, data):
+                        self.data = data
+                        self.left = None
+                        self.right = None
+
+                class BinaryTree:
+                    def __init__(self):
+                        self.root = None
+
+                    def insert(self, data):
+                        if self.root is None:
+                            self.root = Node(data)
+                        else:
+                            self._insert(self.root, data)
+
+                    def _insert(self, node, data):
+                        if data < node.data:
+                            if node.left is None:
+                                node.left = Node(data)
+                            else:
+                                self._insert(node.left, data)
+                        else:
+                            if node.right is None:
+                                node.right = Node(data)
+                            else:
+                                self._insert(node.right, data)
+
+                    def in_order_traversal(self):
+                        stack = []
+                        current = self.root
+                        while stack or current:
+                            if current:
+                                stack.append(current)
+                                current = current.left
+                            else:
+                                current = stack.pop()
+                                print(current.data, end=" ")
+                                current = current.right
+
+                # Example usage
+                bt = BinaryTree()
+                bt.insert(5)
+                bt.insert(3)
+                bt.insert(7)
+                bt.insert(2)
+                bt.insert(4)
+                bt.insert(6)
+                bt.insert(8)
+                bt.in_order_traversal()  # Output: 2 3 4 5 6 7 8
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: In-Order Traversal Using Recursion</h3>
+            <pre>
+                class Node:
+                    def __init__(self, data):
+                        self.data = data
+                        self.left = None
+                        self.right = None
+
+                class BinaryTree:
+                    def __init__(self):
+                        self.root = None
+
+                    def insert(self, data):
+                        if self.root is None:
+                            self.root = Node(data)
+                        else:
+                            self._insert(self.root, data)
+
+                    def _insert(self, node, data):
+                        if data < node.data:
+                            if node.left is None:
+                                node.left = Node(data)
+                            else:
+                                self._insert(node.left, data)
+                        else:
+                            if node.right is None:
+                                node.right = Node(data)
+                            else:
+                                self._insert(node.right, data)
+
+                    def in_order_traversal(self):
+                        self._in_order_traversal(self.root)
+
+                    def _in_order_traversal(self, node):
+                        if node:
+                            self._in_order_traversal(node.left)
+                            print(node.data, end=" ")
+                            self._in_order_traversal(node.right)
+
+                # Example usage
+                bt = BinaryTree()
+                bt.insert(5)
+                bt.insert(3)
+                bt.insert(7)
+                bt.insert(2)
+                bt.insert(4)
+                bt.insert(6)
+                bt.insert(8)
+                bt.in_order_traversal()  # Output: 2 3 4 5 6 7 8
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-14" class="problem-section">
+        <h2>14. Graphs: Write a program to represent a graph using an adjacency list.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Basic Graph Representation</h3>
+            <pre>
+                class Graph:
+                    def __init__(self):
+                        self.graph = {}
+
+                    def add_edge(self, u, v):
+                        if u not in self.graph:
+                            self.graph[u] = []
+                        self.graph[u].append(v)
+
+                    def display(self):
+                        for node in self.graph:
+                            print(f"{node} -> {', '.join(map(str, self.graph[node]))}")
+
+                # Example usage
+                g = Graph()
+                g.add_edge(0, 1)
+                g.add_edge(0, 2)
+                g.add_edge(1, 2)
+                g.add_edge(2, 0)
+                g.add_edge(2, 3)
+                g.add_edge(3, 3)
+                g.display()
+                # Output:
+                # 0 -> 1, 2
+                # 1 -> 2
+                # 2 -> 0, 3
+                # 3 -> 3
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using defaultdict from collections</h3>
+            <pre>
+                from collections import defaultdict
+
+                class Graph:
+                    def __init__(self):
+                        self.graph = defaultdict(list)
+
+                    def add_edge(self, u, v):
+                        self.graph[u].append(v)
+
+                    def display(self):
+                        for node in self.graph:
+                            print(f"{node} -> {', '.join(map(str, self.graph[node]))}")
+
+                # Example usage
+                g = Graph()
+                g.add_edge(0, 1)
+                g.add_edge(0, 2)
+                g.add_edge(1, 2)
+                g.add_edge(2, 0)
+                g.add_edge(2, 3)
+                g.add_edge(3, 3)
+                g.display()
+                # Output:
+                # 0 -> 1, 2
+                # 1 -> 2
+                # 2 -> 0, 3
+                # 3 -> 3
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using a dictionary of sets</h3>
+            <pre>
+                class Graph:
+                    def __init__(self):
+                        self.graph = {}
+
+                    def add_edge(self, u, v):
+                        if u not in self.graph:
+                            self.graph[u] = set()
+                        self.graph[u].add(v)
+
+                    def display(self):
+                        for node in self.graph:
+                            print(f"{node} -> {', '.join(map(str, self.graph[node]))}")
+
+                # Example usage
+                g = Graph()
+                g.add_edge(0, 1)
+                g.add_edge(0, 2)
+                g.add_edge(1, 2)
+                g.add_edge(2, 0)
+                g.add_edge(2, 3)
+                g.add_edge(3, 3)
+                g.display()
+                # Output:
+                # 0 -> 1, 2
+                # 1 -> 2
+                # 2 -> 0, 3
+                # 3 -> 3
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-15" class="problem-section">
+        <h2>15. Matrix Operations: Write a function to add two matrices.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Using nested loops</h3>
+            <pre>
+                def add_matrices(matrix1, matrix2):
+                    result = []
+                    for i in range(len(matrix1)):
+                        row = []
+                        for j in range(len(matrix1[0])):
+                            row.append(matrix1[i][j] + matrix2[i][j])
+                        result.append(row)
+                    return result
+
+                # Example usage
+                matrix1 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+                matrix2 = [[9, 8, 7], [6, 5, 4], [3, 2, 1]]
+                result = add_matrices(matrix1, matrix2)
+                for row in result:
+                    print(row)
+                # Output:
+                # [10, 10, 10]
+                # [10, 10, 10]
+                # [10, 10, 10]
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using list comprehension</h3>
+            <pre>
+                def add_matrices(matrix1, matrix2):
+                    return [[matrix1[i][j] + matrix2[i][j] for j in range(len(matrix1[0]))] for i in range(len(matrix1))]
+
+                # Example usage
+                matrix1 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+                matrix2 = [[9, 8, 7], [6, 5, 4], [3, 2, 1]]
+                result = add_matrices(matrix1, matrix2)
+                for row in result:
+                    print(row)
+                # Output:
+                # [10, 10, 10]
+                # [10, 10, 10]
+                # [10, 10, 10]
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using NumPy</h3>
+            <pre>
+                import numpy as np
+
+                def add_matrices(matrix1, matrix2):
+                    return np.add(matrix1, matrix2)
+
+                # Example usage
+                matrix1 = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+                matrix2 = np.array([[9, 8, 7], [6, 5, 4], [3, 2, 1]])
+                result = add_matrices(matrix1, matrix2)
+                print(result)
+                # Output:
+                # [[10 10 10]
+                #  [10 10 10]
+                #  [10 10 10]]
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-16" class="problem-section">
+        <h2>16. Set Theory: Write a program to find the union of two sets.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Using the union() method</h3>
+            <pre>
+                def union_sets(set1, set2):
+                    return set1.union(set2)
+
+                # Example usage
+                set1 = {1, 2, 3}
+                set2 = {3, 4, 5}
+                result = union_sets(set1, set2)
+                print(result)  # Output: {1, 2, 3, 4, 5}
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using the | operator</h3>
+            <pre>
+                def union_sets(set1, set2):
+                    return set1 | set2
+
+                # Example usage
+                set1 = {1, 2, 3}
+                set2 = {3, 4, 5}
+                result = union_sets(set1, set2)
+                print(result)  # Output: {1, 2, 3, 4, 5}
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using the update() method</h3>
+            <pre>
+                def union_sets(set1, set2):
+                    set1.update(set2)
+                    return set1
+
+                # Example usage
+                set1 = {1, 2, 3}
+                set2 = {3, 4, 5}
+                result = union_sets(set1, set2)
+                print(result)  # Output: {1, 2, 3, 4, 5}
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-17" class="problem-section">
+        <h2>17. String Operations: Write a function to check if a string is a palindrome.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Using String Slicing</h3>
+            <pre>
+                def is_palindrome(s):
+                    return s == s[::-1]
+
+                # Example usage
+                s = "racecar"
+                print(f"Is '{s}' a palindrome? {is_palindrome(s)}")  # Output: Is 'racecar' a palindrome? True
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using a Loop</h3>
+            <pre>
+                def is_palindrome(s):
+                    for i in range(len(s) // 2):
+                        if s[i] != s[-(i + 1)]:
+                            return False
+                    return True
+
+                # Example usage
+                s = "hello"
+                print(f"Is '{s}' a palindrome? {is_palindrome(s)}")  # Output: Is 'hello' a palindrome? False
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using Recursion</h3>
+            <pre>
+                def is_palindrome(s):
+                    if len(s) <= 1:
+                        return True
+                    if s[0] != s[-1]:
+                        return False
+                    return is_palindrome(s[1:-1])
+
+                # Example usage
+                s = "madam"
+                print(f"Is '{s}' a palindrome? {is_palindrome(s)}")  # Output: Is 'madam' a palindrome? True
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-18" class="problem-section">
+        <h2>18. Number Series: Write a program to generate the first n numbers of the Fibonacci series.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Using Iteration</h3>
+            <pre>
+                def fibonacci_series(n):
+                    fib_series = [0, 1]
+                    for i in range(2, n):
+                        fib_series.append(fib_series[-1] + fib_series[-2])
+                    return fib_series[:n]
+
+                # Example usage
+                n = 10
+                print(f"First {n} numbers of the Fibonacci series: {fibonacci_series(n)}")
+                # Output: First 10 numbers of the Fibonacci series: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using Recursion</h3>
+            <pre>
+                def fibonacci(n):
+                    if n <= 0:
+                        return 0
+                    elif n == 1:
+                        return 1
+                    else:
+                        return fibonacci(n - 1) + fibonacci(n - 2)
+
+                def fibonacci_series(n):
+                    return [fibonacci(i) for i in range(n)]
+
+                # Example usage
+                n = 10
+                print(f"First {n} numbers of the Fibonacci series: {fibonacci_series(n)}")
+                # Output: First 10 numbers of the Fibonacci series: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using Dynamic Programming</h3>
+            <pre>
+                def fibonacci_series(n):
+                    if n <= 0:
+                        return []
+                    elif n == 1:
+                        return [0]
+                    fib_series = [0, 1]
+                    for i in range(2, n):
+                        fib_series.append(fib_series[i - 1] + fib_series[i - 2])
+                    return fib_series
+
+                # Example usage
+                n = 10
+                print(f"First {n} numbers of the Fibonacci series: {fibonacci_series(n)}")
+                # Output: First 10 numbers of the Fibonacci series: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-19" class="problem-section">
+        <h2>19. Pattern Series: Write a program to print the following pattern:</h2>
+        <pre>
+        *
+        **
+        ***
+        ****
+        *****
+        </pre>
+
+        <div class="solution">
+            <h3>Approach 1: Using a for loop</h3>
+            <pre>
+                def print_pattern(n):
+                    for i in range(1, n + 1):
+                        print('*' * i)
+
+                # Example usage
+                n = 5
+                print_pattern(n)
+                # Output:
+                # *
+                # **
+                # ***
+                # ****
+                # *****
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using a while loop</h3>
+            <pre>
+                def print_pattern(n):
+                    i = 1
+                    while i <= n:
+                        print('*' * i)
+                        i += 1
+
+                # Example usage
+                n = 5
+                print_pattern(n)
+                # Output:
+                # *
+                # **
+                # ***
+                # ****
+                # *****
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using recursion</h3>
+            <pre>
+                def print_pattern(n, i=1):
+                    if i > n:
+                        return
+                    print('*' * i)
+                    print_pattern(n, i + 1)
+
+                # Example usage
+                n = 5
+                print_pattern(n)
+                # Output:
+                # *
+                # **
+                # ***
+                # ****
+                # *****
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-20" class="problem-section">
+        <h2>20. Shortest Path Calculation Logic: Implement Dijkstra’s algorithm for finding the shortest path in a graph.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Basic Dijkstra's Algorithm Implementation</h3>
+            <pre>
+                import heapq
+
+                def dijkstra(graph, start):
+                    queue = []
+                    heapq.heappush(queue, (0, start))
+                    distances = {node: float('inf') for node in graph}
+                    distances[start] = 0
+                    while queue:
+                        current_distance, current_node = heapq.heappop(queue)
+                        if current_distance > distances[current_node]:
+                            continue
+                        for neighbor, weight in graph[current_node].items():
+                            distance = current_distance + weight
+                            if distance < distances[neighbor]:
+                                distances[neighbor] = distance
+                                heapq.heappush(queue, (distance, neighbor))
+                    return distances
+
+                # Example usage
+                graph = {
+                    'A': {'B': 1, 'C': 4},
+                    'B': {'A': 1, 'C': 2, 'D': 5},
+                    'C': {'A': 4, 'B': 2, 'D': 1},
+                    'D': {'B': 5, 'C': 1}
+                }
+                start_node = 'A'
+                print(dijkstra(graph, start_node))
+                # Output: {'A': 0, 'B': 1, 'C': 3, 'D': 4}
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using a priority queue</h3>
+            <pre>
+                import heapq
+
+                def dijkstra(graph, start):
+                    priority_queue = [(0, start)]
+                    distances = {node: float('inf') for node in graph}
+                    distances[start] = 0
+                    while priority_queue:
+                        current_distance, current_node = heapq.heappop(priority_queue)
+                        if current_distance > distances[current_node]:
+                            continue
+                        for neighbor, weight in graph[current_node].items():
+                            distance = current_distance + weight
+                            if distance < distances[neighbor]:
+                                distances[neighbor] = distance
+                                heapq.heappush(priority_queue, (distance, neighbor))
+                    return distances
+
+                # Example usage
+                graph = {
+                    'A': {'B': 1, 'C': 4},
+                    'B': {'A': 1, 'C': 2, 'D': 5},
+                    'C': {'A': 4, 'B': 2, 'D': 1},
+                    'D': {'B': 5, 'C': 1}
+                }
+                start_node = 'A'
+                print(dijkstra(graph, start_node))
+                # Output: {'A': 0, 'B': 1, 'C': 3, 'D': 4}
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using a dictionary for the graph representation</h3>
+            <pre>
+                import heapq
+
+                def dijkstra(graph, start):
+                    priority_queue = [(0, start)]
+                    distances = {node: float('inf') for node in graph}
+                    distances[start] = 0
+                    while priority_queue:
+                        current_distance, current_node = heapq.heappop(priority_queue)
+                        if current_distance > distances[current_node]:
+                            continue
+                        for neighbor, weight in graph[current_node].items():
+                            distance = current_distance + weight
+                            if distance < distances[neighbor]:
+                                distances[neighbor] = distance
+                                heapq.heappush(priority_queue, (distance, neighbor))
+                    return distances
+
+                # Example usage
+                graph = {
+                    'A': {'B': 1, 'C': 4},
+                    'B': {'A': 1, 'C': 2, 'D': 5},
+                    'C': {'A': 4, 'B': 2, 'D': 1},
+                    'D': {'B': 5, 'C': 1}
+                }
+                start_node = 'A'
+                print(dijkstra(graph, start_node))
+                # Output: {'A': 0, 'B': 1, 'C': 3, 'D': 4}
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-21" class="problem-section">
+        <h2>21. Area, Shapes & Perimeter: Write a program to calculate the area of a circle.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Using the math module</h3>
+            <pre>
+                import math
+
+                def area_of_circle(radius):
+                    return math.pi * radius ** 2
+
+                # Example usage
+                radius = 5
+                print("Area of Circle:", area_of_circle(radius))  # Output: Area of Circle: 78.53981633974483
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using a constant for pi</h3>
+            <pre>
+                def area_of_circle(radius):
+                    pi = 3.141592653589793
+                    return pi * radius ** 2
+
+                # Example usage
+                radius = 5
+                print("Area of Circle:", area_of_circle(radius))  # Output: Area of Circle: 78.53981633974483
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using a lambda function</h3>
+            <pre>
+                area_of_circle = lambda radius: 3.141592653589793 * radius ** 2
+
+                # Example usage
+                radius = 5
+                print("Area of Circle:", area_of_circle(radius))  # Output: Area of Circle: 78.53981633974483
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-22" class="problem-section">
+        <h2>22. Numbers and Decimal Fractions: Write a program to convert a decimal number to binary.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Using bin() function</h3>
+            <pre>
+                def decimal_to_binary(n):
+                    return bin(n).replace("0b", "")
+
+                # Example usage
+                decimal_number = 10
+                print("Binary representation:", decimal_to_binary(decimal_number))  # Output: Binary representation: 1010
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using recursion</h3>
+            <pre>
+                def decimal_to_binary(n):
+                    if n == 0:
+                        return "0"
+                    elif n == 1:
+                        return "1"
+                    else:
+                        return decimal_to_binary(n // 2) + str(n % 2)
+
+                # Example usage
+                decimal_number = 10
+                print("Binary representation:", decimal_to_binary(decimal_number))  # Output: Binary representation: 1010
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using a loop</h3>
+            <pre>
+                def decimal_to_binary(n):
+                    binary = ""
+                    while n > 0:
+                        binary = str(n % 2) + binary
+                        n = n // 2
+                    return binary
+
+                # Example usage
+                decimal_number = 10
+                print("Binary representation:", decimal_to_binary(decimal_number))  # Output: Binary representation: 1010
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-23" class="problem-section">
+        <h2>23. Operators: Write a program that performs addition, subtraction, multiplication, and division using a menu-driven system.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Using if-elif-else statements</h3>
+            <pre>
+                def add(x, y):
+                    return x + y
+
+                def subtract(x, y):
+                    return x - y
+
+                def multiply(x, y):
+                    return x * y
+
+                def divide(x, y):
+                    if y == 0:
+                        return "Cannot divide by zero"
+                    return x / y
+
+                def menu():
+                    print("Select operation:")
+                    print("1. Add")
+                    print("2. Subtract")
+                    print("3. Multiply")
+                    print("4. Divide")
+
+                while True:
+                    menu()
+                    choice = input("Enter choice (1/2/3/4): ")
+
+                    if choice in ('1', '2', '3', '4'):
+                        num1 = float(input("Enter first number: "))
+                        num2 = float(input("Enter second number: "))
+
+                        if choice == '1':
+                            print("Result:", add(num1, num2))
+                        elif choice == '2':
+                            print("Result:", subtract(num1, num2))
+                        elif choice == '3':
+                            print("Result:", multiply(num1, num2))
+                        elif choice == '4':
+                            print("Result:", divide(num1, num2))
+                    else:
+                        print("Invalid Input")
+
+                    next_calculation = input("Do you want to perform another calculation? (yes/no): ")
+                    if next_calculation.lower() != 'yes':
+                        break
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using a dictionary for operations</h3>
+            <pre>
+                def add(x, y):
+                    return x + y
+
+                def subtract(x, y):
+                    return x - y
+
+                def multiply(x, y):
+                    return x * y
+
+                def divide(x, y):
+                    if y == 0:
+                        return "Cannot divide by zero"
+                    return x / y
+
+                operations = {
+                    '1': add,
+                    '2': subtract,
+                    '3': multiply,
+                    '4': divide
+                }
+
+                def menu():
+                    print("Select operation:")
+                    print("1. Add")
+                    print("2. Subtract")
+                    print("3. Multiply")
+                    print("4. Divide")
+
+                while True:
+                    menu()
+                    choice = input("Enter choice (1/2/3/4): ")
+
+                    if choice in operations:
+                        num1 = float(input("Enter first number: "))
+                        num2 = float(input("Enter second number: "))
+                        print("Result:", operations[choice](num1, num2))
+                    else:
+                        print("Invalid Input")
+
+                    next_calculation = input("Do you want to perform another calculation? (yes/no): ")
+                    if next_calculation.lower() != 'yes':
+                        break
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using a class</h3>
+            <pre>
+                class Calculator:
+                    def add(self, x, y):
+                        return x + y
+
+                    def subtract(self, x, y):
+                        return x - y
+
+                    def multiply(self, x, y):
+                        return x * y
+
+                    def divide(self, x, y):
+                        if y == 0:
+                            return "Cannot divide by zero"
+                        return x / y
+
+                    def menu(self):
+                        print("Select operation:")
+                        print("1. Add")
+                        print("2. Subtract")
+                        print("3. Multiply")
+                        print("4. Divide")
+
+                calc = Calculator()
+
+                while True:
+                    calc.menu()
+                    choice = input("Enter choice (1/2/3/4): ")
+
+                    if choice in ('1', '2', '3', '4'):
+                        num1 = float(input("Enter first number: "))
+                        num2 = float(input("Enter second number: "))
+
+                        if choice == '1':
+                            print("Result:", calc.add(num1, num2))
+                        elif choice == '2':
+                            print("Result:", calc.subtract(num1, num2))
+                        elif choice == '3':
+                            print("Result:", calc.multiply(num1, num2))
+                        elif choice == '4':
+                            print("Result:", calc.divide(num1, num2))
+                    else:
+                        print("Invalid Input")
+
+                    next_calculation = input("Do you want to perform another calculation? (yes/no): ")
+                    if next_calculation.lower() != 'yes':
+                        break
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-24" class="problem-section">
+        <h2>24. Looping Statements: Write a program to print the multiplication table of a number.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Using a for loop</h3>
+            <pre>
+                def print_multiplication_table(n):
+                    for i in range(1, 11):
+                        print(f"{n} x {i} = {n * i}")
+
+                # Example usage
+                number = 5
+                print_multiplication_table(number)
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using a while loop</h3>
+            <pre>
+                def print_multiplication_table(n):
+                    i = 1
+                    while i <= 10:
+                        print(f"{n} x {i} = {n * i}")
+                        i += 1
+
+                # Example usage
+                number = 5
+                print_multiplication_table(number)
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using list comprehension</h3>
+            <pre>
+                def print_multiplication_table(n):
+                    table = [f"{n} x {i} = {n * i}" for i in range(1, 11)]
+                    for line in table:
+                        print(line)
+
+                # Example usage
+                number = 5
+                print_multiplication_table(number)
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-25" class="problem-section">
+        <h2>25. Object-Oriented Programming (OOPS): Create a class Car with methods for starting and stopping the car.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Basic Class Implementation</h3>
+            <pre>
+                class Car:
+                    def __init__(self, make, model):
+                        self.make = make
+                        self.model = model
+                        self.is_running = False
+
+                    def start(self):
+                        if not self.is_running:
+                            self.is_running = True
+                            print(f"{self.make} {self.model} started.")
+                        else:
+                            print(f"{self.make} {self.model} is already running.")
+
+                    def stop(self):
+                        if self.is_running:
+                            self.is_running = False
+                            print(f"{self.make} {self.model} stopped.")
+                        else:
+                            print(f"{self.make} {self.model} is already stopped.")
+
+                # Example usage
+                car = Car("Toyota", "Corolla")
+                car.start()  # Output: Toyota Corolla started.
+                car.stop()   # Output: Toyota Corolla stopped.
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using a flag for engine status</h3>
+            <pre>
+                class Car:
+                    def __init__(self, make, model):
+                        self.make = make
+                        self.model = model
+                        self.engine_on = False
+
+                    def start(self):
+                        if not self.engine_on:
+                            self.engine_on = True
+                            print(f"{self.make} {self.model} engine started.")
+                        else:
+                            print(f"{self.make} {self.model} engine is already on.")
+
+                    def stop(self):
+                        if self.engine_on:
+                            self.engine_on = False
+                            print(f"{self.make} {self.model} engine stopped.")
+                        else:
+                            print(f"{self.make} {self.model} engine is already off.")
+
+                # Example usage
+                car = Car("Honda", "Civic")
+                car.start()  # Output: Honda Civic engine started.
+                car.stop()   # Output: Honda Civic engine stopped.
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using a method to check engine status</h3>
+            <pre>
+                class Car:
+                    def __init__(self, make, model):
+                        self.make = make
+                        self.model = model
+                        self.running = False
+
+                    def start(self):
+                        if not self.running:
+                            self.running = True
+                            print(f"{self.make} {self.model} is now running.")
+                        else:
+                            print(f"{self.make} {self.model} is already running.")
+
+                    def stop(self):
+                        if self.running:
+                            self.running = False
+                            print(f"{self.make} {self.model} has stopped.")
+                        else:
+                            print(f"{self.make} {self.model} is already stopped.")
+
+                    def is_running(self):
+                        return self.running
+
+                # Example usage
+                car = Car("Ford", "Mustang")
+                car.start()  # Output: Ford Mustang is now running.
+                car.stop()   # Output: Ford Mustang has stopped.
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-26" class="problem-section">
+        <h2>26. Functions: Write a function that returns the greater of two numbers.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Using if-else statements</h3>
+            <pre>
+                def greater_of_two(a, b):
+                    if a > b:
+                        return a
+                    else:
+                        return b
+
+                # Example usage
+                num1 = 10
+                num2 = 20
+                print("Greater number is:", greater_of_two(num1, num2))  # Output: Greater number is: 20
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using the max() function</h3>
+            <pre>
+                def greater_of_two(a, b):
+                    return max(a, b)
+
+                # Example usage
+                num1 = 10
+                num2 = 20
+                print("Greater number is:", greater_of_two(num1, num2))  # Output: Greater number is: 20
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using a ternary operator</h3>
+            <pre>
+                def greater_of_two(a, b):
+                    return a if a > b else b
+
+                # Example usage
+                num1 = 10
+                num2 = 20
+                print("Greater number is:", greater_of_two(num1, num2))  # Output: Greater number is: 20
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-27" class="problem-section">
+        <h2>27. Recursion: Write a recursive function to find the power of a number.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Basic Recursive Function</h3>
+            <pre>
+                def power(base, exp):
+                    if exp == 0:
+                        return 1
+                    else:
+                        return base * power(base, exp - 1)
+
+                # Example usage
+                base = 2
+                exp = 3
+                print(f"{base} to the power of {exp} is:", power(base, exp))  # Output: 2 to the power of 3 is: 8
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using a helper function</h3>
+            <pre>
+                def power(base, exp):
+                    def helper(base, exp):
+                        if exp == 0:
+                            return 1
+                        else:
+                            return base * helper(base, exp - 1)
+                    return helper(base, exp)
+
+                # Example usage
+                base = 2
+                exp = 3
+                print(f"{base} to the power of {exp} is:", power(base, exp))  # Output: 2 to the power of 3 is: 8
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using memoization</h3>
+            <pre>
+                def power(base, exp, memo={}):
+                    if exp == 0:
+                        return 1
+                    if exp in memo:
+                        return memo[exp]
+                    memo[exp] = base * power(base, exp - 1, memo)
+                    return memo[exp]
+
+                # Example usage
+                base = 2
+                exp = 3
+                print(f"{base} to the power of {exp} is:", power(base, exp))  # Output: 2 to the power of 3 is: 8
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-28" class="problem-section">
+        <h2>28. Algorithms: Implement a linear search algorithm.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Using a for loop</h3>
+            <pre>
+                def linear_search(arr, x):
+                    for i in range(len(arr)):
+                        if arr[i] == x:
+                            return i
+                    return -1
+
+                # Example usage
+                arr = [2, 3, 4, 10, 40]
+                x = 10
+                result = linear_search(arr, x)
+                print("Element is present at index", result)  # Output: Element is present at index 3
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using a while loop</h3>
+            <pre>
+                def linear_search(arr, x):
+                    i = 0
+                    while i < len(arr):
+                        if arr[i] == x:
+                            return i
+                        i += 1
+                    return -1
+
+                # Example usage
+                arr = [2, 3, 4, 10, 40]
+                x = 10
+                result = linear_search(arr, x)
+                print("Element is present at index", result)  # Output: Element is present at index 3
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using list comprehension</h3>
+            <pre>
+                def linear_search(arr, x):
+                    return next((i for i, val in enumerate(arr) if val == x), -1)
+
+                # Example usage
+                arr = [2, 3, 4, 10, 40]
+                x = 10
+                result = linear_search(arr, x)
+                print("Element is present at index", result)  # Output: Element is present at index 3
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-29" class="problem-section">
+        <h2>29. Arrays: Write a function to find the second largest element in an array.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Using sorting</h3>
+            <pre>
+                def second_largest(arr):
+                    if len(arr) < 2:
+                        return None
+                    arr = list(set(arr))  # Remove duplicates
+                    arr.sort()
+                    return arr[-2]
+
+                # Example usage
+                arr = [3, 5, 7, 2, 8, 8]
+                print("Second largest element is:", second_largest(arr))  # Output: Second largest element is: 7
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using a single pass</h3>
+            <pre>
+                def second_largest(arr):
+                    if len(arr) < 2:
+                        return None
+                    first, second = float('-inf'), float('-inf')
+                    for num in arr:
+                        if num > first:
+                            second = first
+                            first = num
+                        elif first > num > second:
+                            second = num
+                    return second
+
+                # Example usage
+                arr = [3, 5, 7, 2, 8, 8]
+                print("Second largest element is:", second_largest(arr))  # Output: Second largest element is: 7
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using a set to remove duplicates</h3>
+            <pre>
+                def second_largest(arr):
+                    unique_elements = list(set(arr))
+                    if len(unique_elements) < 2:
+                        return None
+                    unique_elements.sort()
+                    return unique_elements[-2]
+
+                # Example usage
+                arr = [3, 5, 7, 2, 8, 8]
+                print("Second largest element is:", second_largest(arr))  # Output: Second largest element is: 7
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-30" class="problem-section">
+        <h2>30. Control Statements: Write a program to find the largest of three numbers.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Using if-else statements</h3>
+            <pre>
+                def largest_of_three(a, b, c):
+                    if a >= b and a >= c:
+                        return a
+                    elif b >= a and b >= c:
+                        return b
+                    else:
+                        return c
+
+                # Example usage
+                num1 = 10
+                num2 = 20
+                num3 = 15
+                print("Largest number is:", largest_of_three(num1, num2, num3))  # Output: Largest number is: 20
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using the max() function</h3>
+            <pre>
+                def largest_of_three(a, b, c):
+                    return max(a, b, c)
+
+                # Example usage
+                num1 = 10
+                num2 = 20
+                num3 = 15
+                print("Largest number is:", largest_of_three(num1, num2, num3))  # Output: Largest number is: 20
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using a list</h3>
+            <pre>
+                def largest_of_three(a, b, c):
+                    return sorted([a, b, c])[-1]
+
+                # Example usage
+                num1 = 10
+                num2 = 20
+                num3 = 15
+                print("Largest number is:", largest_of_three(num1, num2, num3))  # Output: Largest number is: 20
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-31" class="problem-section">
+        <h2>31. Strings: Write a program to count the frequency of each character in a string.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Using a dictionary</h3>
+            <pre>
+                def char_frequency(s):
+                    freq = {}
+                    for char in s:
+                        if char in freq:
+                            freq[char] += 1
+                        else:
+                            freq[char] = 1
+                    return freq
+
+                # Example usage
+                s = "hello world"
+                print("Character frequency:", char_frequency(s))
+                # Output: Character frequency: {'h': 1, 'e': 1, 'l': 3, 'o': 2, ' ': 1, 'w': 1, 'r': 1, 'd': 1}
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using collections.Counter</h3>
+            <pre>
+                from collections import Counter
+
+                def char_frequency(s):
+                    return Counter(s)
+
+                # Example usage
+                s = "hello world"
+                print("Character frequency:", char_frequency(s))
+                # Output: Character frequency: Counter({'l': 3, 'o': 2, 'h': 1, 'e': 1, ' ': 1, 'w': 1, 'r': 1, 'd': 1})
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using defaultdict</h3>
+            <pre>
+                from collections import defaultdict
+
+                def char_frequency(s):
+                    freq = defaultdict(int)
+                    for char in s:
+                        freq[char] += 1
+                    return dict(freq)
+
+                # Example usage
+                s = "hello world"
+                print("Character frequency:", char_frequency(s))
+                # Output: Character frequency: {'h': 1, 'e': 1, 'l': 3, 'o': 2, ' ': 1, 'w': 1, 'r': 1, 'd': 1}
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-32" class="problem-section">
+        <h2>32. Linked List: Implement a doubly linked list and reverse the list.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Basic Doubly Linked List Implementation</h3>
+            <pre>
+                class Node:
+                    def __init__(self, data):
+                        self.data = data
+                        self.next = None
+                        self.prev = None
+
+                class DoublyLinkedList:
+                    def __init__(self):
+                        self.head = None
+
+                    def insert(self, data):
+                        new_node = Node(data)
+                        if self.head is None:
+                            self.head = new_node
+                        else:
+                            current = self.head
+                            while current.next:
+                                current = current.next
+                            current.next = new_node
+                            new_node.prev = current
+
+                    def display(self):
+                        current = self.head
+                        while current:
+                            print(current.data, end=" <-> ")
+                            current = current.next
+                        print("None")
+
+                    def reverse(self):
+                        current = self.head
+                        temp = None
+                        while current:
+                            temp = current.prev
+                            current.prev = current.next
+                            current.next = temp
+                            current = current.prev
+                        if temp:
+                            self.head = temp.prev
+
+                # Example usage
+                dll = DoublyLinkedList()
+                dll.insert(1)
+                dll.insert(2)
+                dll.insert(3)
+                dll.display()  # Output: 1 <-> 2 <-> 3 <-> None
+                dll.reverse()
+                dll.display()  # Output: 3 <-> 2 <-> 1 <-> None
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-33" class="problem-section">
+        <h2>33. Stack: Implement a stack with push, pop, and peek operations.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Basic Stack Implementation</h3>
+            <pre>
+                class Stack:
+                    def __init__(self):
+                        self.stack = []
+
+                    def push(self, item):
+                        self.stack.append(item)
+
+                    def pop(self):
+                        if not self.is_empty():
+                            return self.stack.pop()
+                        return None
+
+                    def peek(self):
+                        if not self.is_empty():
+                            return self.stack[-1]
+                        return None
+
+                    def is_empty(self):
+                        return len(self.stack) == 0
+
+                    def display(self):
+                        print(self.stack)
+
+                # Example usage
+                stack = Stack()
+                stack.push(1)
+                stack.push(2)
+                stack.push(3)
+                stack.display()  # Output: [1, 2, 3]
+                stack.pop()
+                stack.display()  # Output: [1, 2]
+                print("Top element is:", stack.peek())  # Output: Top element is: 2
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-34" class="problem-section">
+        <h2>34. Queue: Implement a circular queue.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Basic Circular Queue Implementation</h3>
+            <pre>
+                class CircularQueue:
+                    def __init__(self, size):
+                        self.size = size
+                        self.queue = [None] * size
+                        self.front = self.rear = -1
+
+                    def enqueue(self, item):
+                        if (self.rear + 1) % self.size == self.front:
+                            print("Queue is full")
+                        elif self.front == -1:
+                            self.front = self.rear = 0
+                            self.queue[self.rear] = item
+                        else:
+                            self.rear = (self.rear + 1) % self.size
+                            self.queue[self.rear] = item
+
+                    def dequeue(self):
+                        if self.front == -1:
+                            print("Queue is empty")
+                            return None
+                        elif self.front == self.rear:
+                            temp = self.queue[self.front]
+                            self.front = self.rear = -1
+                            return temp
+                        else:
+                            temp = self.queue[self.front]
+                            self.front = (self.front + 1) % self.size
+                            return temp
+
+                    def display(self):
+                        if self.front == -1:
+                            print("Queue is empty")
+                        elif self.rear >= self.front:
+                            print(" ".join(map(str, self.queue[self.front:self.rear + 1])))
+                        else:
+                            print(" ".join(map(str, self.queue[self.front:] + self.queue[:self.rear + 1])))
+
+                # Example usage
+                cq = CircularQueue(5)
+                cq.enqueue(1)
+                cq.enqueue(2)
+                cq.enqueue(3)
+                cq.enqueue(4)
+                cq.enqueue(5)
+                cq.display()  # Output: 1 2 3 4 5
+                cq.dequeue()
+                cq.display()  # Output: 2 3 4 5
+                cq.enqueue(6)
+                cq.display()  # Output: 2 3 4 5 6
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-35" class="problem-section">
+        <h2>35. Trees: Write a function to find the height of a binary tree.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Using Recursion</h3>
+            <pre>
+                class Node:
+                    def __init__(self, data):
+                        self.data = data
+                        self.left = None
+                        self.right = None
+
+                class BinaryTree:
+                    def __init__(self):
+                        self.root = None
+
+                    def insert(self, data):
+                        if self.root is None:
+                            self.root = Node(data)
+                        else:
+                            self._insert(self.root, data)
+
+                    def _insert(self, node, data):
+                        if data < node.data:
+                            if node.left is None:
+                                node.left = Node(data)
+                            else:
+                                self._insert(node.left, data)
+                        else:
+                            if node.right is None:
+                                node.right = Node(data)
+                            else:
+                                self._insert(node.right, data)
+
+                    def height(self, node):
+                        if node is None:
+                            return 0
+                        else:
+                            left_height = self.height(node.left)
+                            right_height = self.height(node.right)
+                            return max(left_height, right_height) + 1
+
+                # Example usage
+                bt = BinaryTree()
+                bt.insert(5)
+                bt.insert(3)
+                bt.insert(7)
+                bt.insert(2)
+                bt.insert(4)
+                bt.insert(6)
+                bt.insert(8)
+                print("Height of the tree:", bt.height(bt.root))  # Output: Height of the tree: 3
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-36" class="problem-section">
+        <h2>36. Graphs: Implement depth-first search (DFS) in a graph.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Using Recursion</h3>
+            <pre>
+                class Graph:
+                    def __init__(self):
+                        self.graph = {}
+
+                    def add_edge(self, u, v):
+                        if u not in self.graph:
+                            self.graph[u] = []
+                        self.graph[u].append(v)
+
+                    def dfs(self, v, visited=None):
+                        if visited is None:
+                            visited = set()
+                        visited.add(v)
+                        print(v, end=' ')
+                        for neighbor in self.graph.get(v, []):
+                            if neighbor not in visited:
+                                self.dfs(neighbor, visited)
+
+                # Example usage
+                g = Graph()
+                g.add_edge(0, 1)
+                g.add_edge(0, 2)
+                g.add_edge(1, 2)
+                g.add_edge(2, 0)
+                g.add_edge(2, 3)
+                g.add_edge(3, 3)
+                print("Depth First Traversal starting from vertex 2:")
+                g.dfs(2)  # Output: 2 0 1 3
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-37" class="problem-section">
+        <h2>37. Matrix Operations: Write a function to multiply two matrices.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Using nested loops</h3>
+            <pre>
+                def multiply_matrices(matrix1, matrix2):
+                    result = [[0 for _ in range(len(matrix2[0]))] for _ in range(len(matrix1))]
+                    for i in range(len(matrix1)):
+                        for j in range(len(matrix2[0])):
+                            for k in range(len(matrix2)):
+                                result[i][j] += matrix1[i][k] * matrix2[k][j]
+                    return result
+
+                # Example usage
+                matrix1 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+                matrix2 = [[9, 8, 7], [6, 5, 4], [3, 2, 1]]
+                result = multiply_matrices(matrix1, matrix2)
+                for row in result:
+                    print(row)
+                # Output:
+                # [30, 24, 18]
+                # [84, 69, 54]
+                # [138, 114, 90]
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using list comprehension</h3>
+            <pre>
+                def multiply_matrices(matrix1, matrix2):
+                    return [[sum(a * b for a, b in zip(matrix1_row, matrix2_col)) for matrix2_col in zip(*matrix2)] for matrix1_row in matrix1]
+
+                # Example usage
+                matrix1 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+                matrix2 = [[9, 8, 7], [6, 5, 4], [3, 2, 1]]
+                result = multiply_matrices(matrix1, matrix2)
+                for row in result:
+                    print(row)
+                # Output:
+                # [30, 24, 18]
+                # [84, 69, 54]
+                # [138, 114, 90]
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using NumPy</h3>
+            <pre>
+                import numpy as np
+
+                def multiply_matrices(matrix1, matrix2):
+                    return np.dot(matrix1, matrix2)
+
+                # Example usage
+                matrix1 = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+                matrix2 = np.array([[9, 8, 7], [6, 5, 4], [3, 2, 1]])
+                result = multiply_matrices(matrix1, matrix2)
+                print(result)
+                # Output:
+                # [[ 30  24  18]
+                #  [ 84  69  54]
+                #  [138 114  90]]
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-38" class="problem-section">
+        <h2>38. Set Theory: Write a program to find the intersection of two sets.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Using the intersection() method</h3>
+            <pre>
+                def intersection_sets(set1, set2):
+                    return set1.intersection(set2)
+
+                # Example usage
+                set1 = {1, 2, 3}
+                set2 = {3, 4, 5}
+                result = intersection_sets(set1, set2)
+                print(result)  # Output: {3}
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using the & operator</h3>
+            <pre>
+                def intersection_sets(set1, set2):
+                    return set1 & set2
+
+                # Example usage
+                set1 = {1, 2, 3}
+                set2 = {3, 4, 5}
+                result = intersection_sets(set1, set2)
+                print(result)  # Output: {3}
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using list comprehension</h3>
+            <pre>
+                def intersection_sets(set1, set2):
+                    return {x for x in set1 if x in set2}
+
+                # Example usage
+                set1 = {1, 2, 3}
+                set2 = {3, 4, 5}
+                result = intersection_sets(set1, set2)
+                print(result)  # Output: {3}
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-39" class="problem-section">
+        <h2>39. String Operations: Write a function to count vowels in a string.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Using a loop</h3>
+            <pre>
+                def count_vowels(s):
+                    vowels = "aeiouAEIOU"
+                    count = 0
+                    for char in s:
+                        if (char in vowels):
+                            count += 1
+                    return count
+
+                # Example usage
+                s = "hello world"
+                print("Number of vowels:", count_vowels(s))  # Output: Number of vowels: 3
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using list comprehension</h3>
+            <pre>
+                def count_vowels(s):
+                    return sum(1 for char in s if char in "aeiouAEIOU")
+
+                # Example usage
+                s = "hello world"
+                print("Number of vowels:", count_vowels(s))  # Output: Number of vowels: 3
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using filter and lambda</h3>
+            <pre>
+                def count_vowels(s):
+                    return len(list(filter(lambda char: char in "aeiouAEIOU", s)))
+
+                # Example usage
+                s = "hello world"
+                print("Number of vowels:", count_vowels(s))  # Output: Number of vowels: 3
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-40" class="problem-section">
+        <h2>40. Number Series: Write a program to find the sum of the first n natural numbers.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Using a loop</h3>
+            <pre>
+                def sum_of_natural_numbers(n):
+                    total = 0
+                    for i in range(1, n + 1):
+                        total += i
+                    return total
+
+                # Example usage
+                n = 10
+                print("Sum of first", n, "natural numbers is:", sum_of_natural_numbers(n))  # Output: Sum of first 10 natural numbers is: 55
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using the formula</h3>
+            <pre>
+                def sum_of_natural_numbers(n):
+                    return n * (n + 1) // 2
+
+                # Example usage
+                n = 10
+                print("Sum of first", n, "natural numbers is:", sum_of_natural_numbers(n))  # Output: Sum of first 10 natural numbers is: 55
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using recursion</h3>
+            <pre>
+                def sum_of_natural_numbers(n):
+                    if n == 0:
+                        return 0
+                    else:
+                        return n + sum_of_natural_numbers(n - 1)
+
+                # Example usage
+                n = 10
+                print("Sum of first", n, "natural numbers is:", sum_of_natural_numbers(n))  # Output: Sum of first 10 natural numbers is: 55
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-41" class="problem-section">
+        <h2>41. Pattern Series: Write a program to print a pyramid pattern of stars.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Using nested loops</h3>
+            <pre>
+                def print_pyramid(n):
+                    for i in range(n):
+                        print(' ' * (n - i - 1) + '*' * (2 * i + 1))
+
+                # Example usage
+                n = 5
+                print_pyramid(n)
+                # Output:
+                #     *
+                #    ***
+                #   *****
+                #  *******
+                # *********
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using a single loop</h3>
+            <pre>
+                def print_pyramid(n):
+                    for i in range(n):
+                        print(' ' * (n - i - 1) + '*' * (2 * i + 1))
+
+                # Example usage
+                n = 5
+                print_pyramid(n)
+                # Output:
+                #     *
+                #    ***
+                #   *****
+                #  *******
+                # *********
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using list comprehension</h3>
+            <pre>
+                def print_pyramid(n):
+                    [print(' ' * (n - i - 1) + '*' * (2 * i + 1)) for i in range(n)]
+
+                # Example usage
+                n = 5
+                print_pyramid(n)
+                # Output:
+                #     *
+                #    ***
+                #   *****
+                #  *******
+                # *********
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-42" class="problem-section">
+        <h2>42. Shortest Path Calculation Logic: Implement the Bellman-Ford algorithm for shortest path calculation.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Basic Bellman-Ford Algorithm Implementation</h3>
+            <pre>
+                class Graph:
+                    def __init__(self, vertices):
+                        self.V = vertices
+                        self.graph = []
+
+                    def add_edge(self, u, v, w):
+                        self.graph.append([u, v, w])
+
+                    def bellman_ford(self, src):
+                        dist = [float("Inf")] * self.V
+                        dist[src] = 0
+
+                        for _ in range(self.V - 1):
+                            for u, v, w in self.graph:
+                                if dist[u] != float("Inf") and dist[u] + w < dist[v]:
+                                    dist[v] = dist[u] + w
+
+                        for u, v, w in self.graph:
+                            if dist[u] != float("Inf") and dist[u] + w < dist[v]:
+                                print("Graph contains negative weight cycle")
+                                return
+
+                        self.print_solution(dist)
+
+                    def print_solution(self, dist):
+                        print("Vertex Distance from Source")
+                        for i in range(self.V):
+                            print(f"{i}\t\t{dist[i]}")
+
+                # Example usage
+                g = Graph(5)
+                g.add_edge(0, 1, -1)
+                g.add_edge(0, 2, 4)
+                g.add_edge(1, 2, 3)
+                g.add_edge(1, 3, 2)
+                g.add_edge(1, 4, 2)
+                g.add_edge(3, 2, 5)
+                g.add_edge(3, 1, 1)
+                g.add_edge(4, 3, -3)
+
+                g.bellman_ford(0)
+                # Output:
+                # Vertex Distance from Source
+                # 0		0
+                # 1		-1
+                # 2		2
+                # 3		-2
+                # 4		1
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-43" class="problem-section">
+        <h2>43. Area, Shapes & Perimeter: Write a program to calculate the perimeter of a rectangle.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Using a function</h3>
+            <pre>
+                def perimeter_of_rectangle(length, width):
+                    return 2 * (length + width)
+
+                # Example usage
+                length = 5
+                width = 3
+                print("Perimeter of Rectangle:", perimeter_of_rectangle(length, width))  # Output: Perimeter of Rectangle: 16
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using a lambda function</h3>
+            <pre>
+                perimeter_of_rectangle = lambda length, width: 2 * (length + width)
+
+                # Example usage
+                length = 5
+                width = 3
+                print("Perimeter of Rectangle:", perimeter_of_rectangle(length, width))  # Output: Perimeter of Rectangle: 16
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using a class</h3>
+            <pre>
+                class Rectangle:
+                    def __init__(self, length, width):
+                        self.length = length
+                        self.width = width
+
+                    def perimeter(self):
+                        return 2 * (self.length + self.width)
+
+                # Example usage
+                rect = Rectangle(5, 3)
+                print("Perimeter of Rectangle:", rect.perimeter())  # Output: Perimeter of Rectangle: 16
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-44" class="problem-section">
+        <h2>44. Numbers and Decimal Fractions: Write a program to convert a binary number to decimal.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Using int() function</h3>
+            <pre>
+                def binary_to_decimal(binary):
+                    return int(binary, 2)
+
+                # Example usage
+                binary_number = "1010"
+                print("Decimal representation:", binary_to_decimal(binary_number))  # Output: Decimal representation: 10
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using a loop</h3>
+            <pre>
+                def binary_to_decimal(binary):
+                    decimal = 0
+                    for digit in binary:
+                        decimal = decimal * 2 + int(digit)
+                    return decimal
+
+                # Example usage
+                binary_number = "1010"
+                print("Decimal representation:", binary_to_decimal(binary_number))  # Output: Decimal representation: 10
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using recursion</h3>
+            <pre>
+                def binary_to_decimal(binary):
+                    if binary == "":
+                        return 0
+                    else:
+                        return int(binary[0]) * (2 ** (len(binary) - 1)) + binary_to_decimal(binary[1:])
+
+                # Example usage
+                binary_number = "1010"
+                print("Decimal representation:", binary_to_decimal(binary_number))  # Output: Decimal representation: 10
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-45" class="problem-section">
+        <h2>45. Operators: Write a program to swap two numbers using operators.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Using addition and subtraction</h3>
+            <pre>
+                def swap_numbers(a, b):
+                    a = a + b
+                    b = a - b
+                    a = a - b
+                    return a, b
+
+                # Example usage
+                a = 5
+                b = 3
+                a, b = swap_numbers(a, b)
+                print("Swapped numbers:", a, b)  # Output: Swapped numbers: 3 5
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using XOR operator</h3>
+            <pre>
+                def swap_numbers(a, b):
+                    a = a ^ b
+                    b = a ^ b
+                    a = a ^ b
+                    return a, b
+
+                # Example usage
+                a = 5
+                b = 3
+                a, b = swap_numbers(a, b)
+                print("Swapped numbers:", a, b)  # Output: Swapped numbers: 3 5
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using tuple unpacking</h3>
+            <pre>
+                def swap_numbers(a, b):
+                    a, b = b, a
+                    return a, b
+
+                # Example usage
+                a = 5
+                b = 3
+                a, b = swap_numbers(a, b)
+                print("Swapped numbers:", a, b)  # Output: Swapped numbers: 3 5
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-46" class="problem-section">
+        <h2>46. Looping Statements: Write a program to calculate the sum of digits of a number.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Using a while loop</h3>
+            <pre>
+                def sum_of_digits(n):
+                    total = 0
+                    while n > 0:
+                        total += n % 10
+                        n = n // 10
+                    return total
+
+                # Example usage
+                number = 1234
+                print("Sum of digits:", sum_of_digits(number))  # Output: Sum of digits: 10
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using recursion</h3>
+            <pre>
+                def sum_of_digits(n):
+                    if n == 0:
+                        return 0
+                    else:
+                        return n % 10 + sum_of_digits(n // 10)
+
+                # Example usage
+                number = 1234
+                print("Sum of digits:", sum_of_digits(number))  # Output: Sum of digits: 10
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using list comprehension</h3>
+            <pre>
+                def sum_of_digits(n):
+                    return sum(int(digit) for digit in str(n))
+
+                # Example usage
+                number = 1234
+                print("Sum of digits:", sum_of_digits(number))  # Output: Sum of digits: 10
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-47" class="problem-section">
+        <h2>47. Object-Oriented Programming (OOPS): Create a class Student with attributes for name, roll_number, and marks, and a method to display the student's details.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Basic Class Implementation</h3>
+            <pre>
+                class Student:
+                    def __init__(self, name, roll_number, marks):
+                        self.name = name
+                        self.roll_number = roll_number
+                        self.marks = marks
+
+                    def display_details(self):
+                        print(f"Name: {self.name}, Roll Number: {self.roll_number}, Marks: {self.marks}")
+
+                # Example usage
+                student1 = Student("Alice", 101, 95)
+                student1.display_details()  # Output: Name: Alice, Roll Number: 101, Marks: 95
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using String Formatting</h3>
+            <pre>
+                class Student:
+                    def __init__(self, name, roll_number, marks):
+                        self.name = name
+                        self.roll_number = roll_number
+                        self.marks = marks
+
+                    def display_details(self):
+                        print("Name:", self.name)
+                        print("Roll Number:", self.roll_number)
+                        print("Marks:", self.marks)
+
+                # Example usage
+                student2 = Student("Bob", 102, 88)
+                student2.display_details()  # Output: Name: Bob, Roll Number: 102, Marks: 88
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Detailed String Representation</h3>
+            <pre>
+                class Student:
+                    def __init__(self, name, roll_number, marks):
+                        self.name = name
+                        self.roll_number = roll_number
+                        self.marks = marks
+
+                    def display_details(self):
+                        details = f"Student [Name: {self.name}, Roll Number: {self.roll_number}, Marks: {self.marks}]"
+                        print(details)
+
+                # Example usage
+                student3 = Student("Charlie", 103, 92)
+                student3.display_details()  # Output: Student [Name: Charlie, Roll Number: 103, Marks: 92]
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-48" class="problem-section">
+        <h2>48. Functions: Write a function to check if a number is prime.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Using a loop</h3>
+            <pre>
+                def is_prime(n):
+                    if n <= 1:
+                        return False
+                    for i in range(2, int(n ** 0.5) + 1):
+                        if n % i == 0:
+                            return False
+                    return True
+
+                # Example usage
+                number = 29
+                print(f"Is {number} a prime number? {is_prime(number)}")  # Output: Is 29 a prime number? True
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using a helper function</h3>
+            <pre>
+                def is_prime(n):
+                    def check_prime(n, i):
+                        if n <= 1:
+                            return False
+                        if i == 1:
+                            return True
+                        if n % i == 0:
+                            return False
+                        return check_prime(n, i - 1)
+                    return check_prime(n, int(n ** 0.5))
+
+                # Example usage
+                number = 29
+                print(f"Is {number} a prime number? {is_prime(number)}")  # Output: Is 29 a prime number? True
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using list comprehension</h3>
+            <pre>
+                def is_prime(n):
+                    return n > 1 and all(n % i != 0 for i in range(2, int(n ** 0.5) + 1))
+
+                # Example usage
+                number = 29
+                print(f"Is {number} a prime number? {is_prime(number)}")  # Output: Is 29 a prime number? True
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-49" class="problem-section">
+        <h2>49. Recursion: Write a recursive function to reverse a string.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Basic Recursive Function</h3>
+            <pre>
+                def reverse_string(s):
+                    if len(s) == 0:
+                        return s
+                    else:
+                        return s[-1] + reverse_string(s[:-1])
+
+                # Example usage
+                s = "hello"
+                print("Reversed string:", reverse_string(s))  # Output: Reversed string: olleh
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using a helper function</h3>
+            <pre>
+                def reverse_string(s):
+                    def helper(s, start, end):
+                        if start >= end:
+                            return s
+                        s[start], s[end] = s[end], s[start]
+                        return helper(s, start + 1, end - 1)
+                    s = list(s)
+                    return ''.join(helper(s, 0, len(s) - 1))
+
+                # Example usage
+                s = "world"
+                print("Reversed string:", reverse_string(s))  # Output: Reversed string: dlrow
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using slicing</h3>
+            <pre>
+                def reverse_string(s):
+                    return s[::-1]
+
+                # Example usage
+                s = "python"
+                print("Reversed string:", reverse_string(s))  # Output: Reversed string: nohtyp
+            </pre>
+        </div>
+    </section>
+
+    <section id="problem-50" class="problem-section">
+        <h2>50. Algorithms: Implement the selection sort algorithm.</h2>
+
+        <div class="solution">
+            <h3>Approach 1: Basic Selection Sort</h3>
+            <pre>
+                def selection_sort(arr):
+                    for i in range(len(arr)):
+                        min_idx = i
+                        for j in range(i + 1, len(arr)):
+                            if arr[j] < arr[min_idx]:
+                                min_idx = j
+                        arr[i], arr[min_idx] = arr[min_idx], arr[i]
+                    return arr
+
+                # Example usage
+                arr = [64, 25, 12, 22, 11]
+                print("Sorted array:", selection_sort(arr))  # Output: Sorted array: [11, 12, 22, 25, 64]
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 2: Using a helper function</h3>
+            <pre>
+                def selection_sort(arr):
+                    def find_min_index(arr, start):
+                        min_idx = start
+                        for i in range(start + 1, len(arr)):
+                            if arr[i] < arr[min_idx]:
+                                min_idx = i
+                        return min_idx
+
+                    for i in range(len(arr)):
+                        min_idx = find_min_index(arr, i)
+                        arr[i], arr[min_idx] = arr[min_idx], arr[i]
+                    return arr
+
+                # Example usage
+                arr = [64, 25, 12, 22, 11]
+                print("Sorted array:", selection_sort(arr))  # Output: Sorted array: [11, 12, 22, 25, 64]
+            </pre>
+        </div>
+
+        <div class="solution">
+            <h3>Approach 3: Using list comprehension</h3>
+            <pre>
+                def selection_sort(arr):
+                    return [arr.pop(arr.index(min(arr[i:]))) for i in range(len(arr))]
+
+                # Example usage
+                arr = [64, 25, 12, 22, 11]
+                print("Sorted array:", selection_sort(arr))  # Output: Sorted array: [11, 12, 22, 25, 64]
+            </pre>
+        </div>
+    </section>
+    <footer div class="footer">
+        <p>2025 TCS NQT Prep By VKshetRa</p>
+        </footer>
+</body>
+</html>

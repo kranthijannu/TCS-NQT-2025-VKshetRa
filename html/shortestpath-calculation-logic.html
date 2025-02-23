@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Theory and Shortest Path Algorithms</title>
+
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+}
+
+pre {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    font-size: 14px;
+    overflow-x: auto;
+}
+
+footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Graph Theory and Shortest Path Algorithms</h1>
+        <nav>
+            <ul>
+                <li><a href="#graph-basics">Graph Basics</a></li>
+                <li><a href="#graph-representation">Graph Representation</a></li>
+                <li><a href="#graph-traversal">Graph Traversal</a></li>
+                <li><a href="#shortest-path">Shortest Path Algorithms</a></li>
+                <li><a href="#optimization-techniques">Optimization Techniques</a></li>
+                <li><a href="#practice-problems">Practice Problems</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="graph-basics">
+        <h2>Graph Basics</h2>
+        <p>Graphs are fundamental data structures used to model relationships between different entities, such as cities, networks, or social connections.</p>
+    </section>
+
+    <section id="graph-representation">
+        <h2>Graph Representation</h2>
+        <p>Graphs can be represented in two primary ways:</p>
+        <ul>
+            <li><strong>Adjacency List</strong>: A collection of lists or dictionaries where each node stores a list of adjacent nodes. This is efficient for sparse graphs.</li>
+            <li><strong>Adjacency Matrix</strong>: A 2D array where each cell indicates whether a pair of vertices is connected or not. This is better for dense graphs.</li>
+        </ul>
+        <h3>Code Examples</h3>
+        <p><strong>Adjacency List Example:</strong></p>
+        <pre>
+            <code>
+            graph = {
+                0: [1, 2],
+                1: [0, 3],
+                2: [0],
+                3: [1]
+            }
+            </code>
+        </pre>
+        <p><strong>Adjacency Matrix Example:</strong></p>
+        <pre>
+            <code>
+            graph = [
+                [0, 1, 1, 0],
+                [1, 0, 0, 1],
+                [1, 0, 0, 0],
+                [0, 1, 0, 0]
+            ]
+            </code>
+        </pre>
+    </section>
+
+    <section id="graph-traversal">
+        <h2>Graph Traversal</h2>
+        <p>Traversal refers to the process of visiting all nodes in a graph in a systematic manner. The two most common traversal algorithms are:</p>
+        <ul>
+            <li><strong>Breadth-First Search (BFS)</strong>: Explores all neighbors at the present depth level before moving on to nodes at the next depth level.</li>
+            <li><strong>Depth-First Search (DFS)</strong>: Explores as far along a branch as possible before backtracking.</li>
+        </ul>
+        <h3>BFS Code Example</h3>
+        <pre>
+            <code>
+            def bfs(graph, start):
+                visited = set()
+                queue = [start]
+                while queue:
+                    node = queue.pop(0)
+                    if node not in visited:
+                        visited.add(node)
+                        queue.extend(graph[node])
+                return visited
+            </code>
+        </pre>
+        <h3>DFS Code Example</h3>
+        <pre>
+            <code>
+            def dfs(graph, start, visited=None):
+                if visited is None:
+                    visited = set()
+                visited.add(start)
+                for neighbor in graph[start]:
+                    if neighbor not in visited:
+                        dfs(graph, neighbor, visited)
+                return visited
+            </code>
+        </pre>
+    </section>
+
+    <section id="shortest-path">
+        <h2>Shortest Path Algorithms</h2>
+        <p>Shortest path algorithms are used to find the shortest path between two nodes in a graph. Depending on the type of graph, there are several algorithms:</p>
+        <ul>
+            <li><strong>Unweighted Graphs</strong>: Use BFS for finding the shortest path.</li>
+            <li><strong>Weighted Graphs</strong>: Use Dijkstra's Algorithm for non-negative weights and Bellman-Ford Algorithm for graphs with negative weights.</li>
+        </ul>
+        <h3>Shortest Path Algorithms</h3>
+        <p><strong>Dijkstra's Algorithm Example:</strong></p>
+        <pre>
+            <code>
+            import heapq
+
+            def dijkstra(graph, start):
+                queue = [(0, start)]
+                distances = {start: 0}
+                while queue:
+                    (cost, node) = heapq.heappop(queue)
+                    for neighbor, weight in graph[node]:
+                        distance = cost + weight
+                        if neighbor not in distances or distance < distances[neighbor]:
+                            distances[neighbor] = distance
+                            heapq.heappush(queue, (distance, neighbor))
+                return distances
+            </code>
+        </pre>
+    </section>
+
+    <section id="optimization-techniques">
+        <h2>Optimization Techniques</h2>
+        <p>Various optimization techniques can help speed up graph algorithms:</p>
+        <ul>
+            <li><strong>Priority Queues</strong>: Used in algorithms like Dijkstra to reduce time complexity.</li>
+            <li><strong>Dynamic Programming</strong>: Used in algorithms like Floyd-Warshall to avoid recalculating paths.</li>
+            <li><strong>A* Search</strong>: Incorporates heuristics to guide the search and improve efficiency.</li>
+        </ul>
+    </section>
+
+    <section id="practice-problems">
+        <h2>Practice Problems</h2>
+        <p>Here are some problems to practice your graph theory and shortest path algorithm knowledge:</p>
+        <ul>
+            <li><strong>Basic:</strong> Find the shortest path in an unweighted graph.</li>
+            <li><strong>Medium:</strong> Find the shortest path in a graph with negative weights.</li>
+            <li><strong>Advanced:</strong> Solve multi-source shortest path problems.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p> 2025 Graph Theory and Algorithms | By VKshetRa</p>
+    </footer>
+</body>
+<script>
+    // Example of adding interactivity to the webpage
+
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        section.addEventListener('click', () => {
+            alert(`You clicked on the ${section.id} section`);
+        });
+    });
+});
+
+</script>
+</html>

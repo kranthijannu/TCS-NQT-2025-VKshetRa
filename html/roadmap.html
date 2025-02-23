@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TCS NQT  Roadmap</title>
+  <link rel="icon" type=""image/png" href="/assets/logo.png">
+  <style>
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #3498db;
+      --light-bg: #f9f9f9;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f3f5;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .header {
+      background: var(--primary-color);
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    .timeline {
+      position: relative;
+      padding: 50px 0;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background: var(--secondary-color);
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+    }
+
+    .day-card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 20px 0;
+      width: 45%;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    .day-card:nth-child(odd) {
+      left: 0;
+    }
+
+    .day-card:nth-child(even) {
+      left: 55%;
+    }
+
+    .day-card::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      right: -13px;
+      background: var(--secondary-color);
+      top: 30px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .day-card.even::after {
+      left: -13px;
+    }
+
+    .day-number {
+      color: var(--secondary-color);
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .resources {
+      background: var(--light-bg);
+      padding: 15px;
+      border-radius: 6px;
+      margin: 10px 0;
+    }
+
+    .practice {
+      color: #27ae60;
+      font-weight: bold;
+    }
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>TCS NQT Intensive Roadmap</h1>
+      <p>Complete Syllabus Coverage with Daily Plan</p>
+    </div>
+  </header>
+ 
+    <!-- Header remains unchanged -->
+  
+    <div class="container">
+      <section class="timeline">
+        <!-- Day 1 -->
+        <div class="day-card">
+          <div class="day-number">Programming Logic Foundation</div>
+          <h3>Topics:</h3>
+          <ul>
+            <li><a href="https://www.geeksforgeeks.org/c-data-types/" target="_blank">Data Types & Variables</a></li>
+            <li><a href="https://www.javatpoint.com/input-output-in-c" target="_blank">Input-Output in C</a></li>
+            <li>
+              <a href="https://www.geeksforgeeks.org/functions-programming/" onclick="showContent('functions')">Functions</a> | 
+              <a href="https://www.geeksforgeeks.org/scope-rules-in-c/" onclick="showContent('scope')">Scope</a>
+            </li>
+            <li><a href="https://www.geeksforgeeks.org/difference-between-static-variables-and-register-variables-in-c/">Variables and Registers</a></li>
+            <li><a href="https://www.freecodecamp.org/news/command-line-for-beginners/">Command Line Programming</a></li>
+          </ul>
+    
+          <div id="content" class="content-box">
+            <p>Select an option to see content.</p>
+          </div>
+    
+          <div class="resources">
+            <h4>Resources:</h4>
+            <p>
+              📘 <a href="https://drive.google.com/drive/folders/1eHF0wzZXAPN2MHYlO2SkWMQ7wc2-4ZUj" target="_blank">C Programming Tutorials PDF</a><br>
+              📘 <a href="/Functions and Scope-output.pdf" target="_blank">Functions Scope PDF</a>
+            </p>
+          </div>
+          <p class="practice">
+            Practice: <a href="quiz.html" target="_blank">Practice 50 MCQs </a>
+          </p>
+        </div>
+  
+        <!-- Day 2 -->
+        <div class="day-card even">
+          <div class="day-number">Core-Concepts in Programming</div>
+          <!-- <div class="day-number">Day 2: Advanced Programming Concepts</div> -->
+          <h3>Topics:</h3>
+          <ul>
+            <li>
+              <a href="https://www.geeksforgeeks.org/c-pointers/" onclick="showContent('functions')">Pointers</a> | 
+              <a href="https://www.geeksforgeeks.org/computer-memory/" onclick="showContent('functions')">Memory</a>
+            </li>
+            <li><a href="https://www.programiz.com/c-programming/library-function" target="_blank">Inbuilt Libraries (based on C)</a></li>
+            <li><a href="https://www.guru99.com/call-by-value-vs-call-by-reference.html" target="_blank">Call by value/ reference</a></li>
+            <li><a href="https://www.freecodecamp.org/news/what-is-recursion/">Recursion</a></li>
+            <li><a href="https://www.geeksforgeeks.org/what-is-iteration/">Iteration</a></li>
+          </ul>
+          <div class="resources">
+            <h4>Resources:</h4>
+            <p><img src="/assets/link.png" width="15px" height="15px"> <a href="/html/core-concepts.html">HandBook-1</a></p>
+            <p>📘 <a href="\core-concepts.pdf" target="_blank">Handbook</a><br>
+           
+          </div>
+          <p class="practice">Practice: <a href="quiz2.html" target="_blank">Practice 50 MCQs </a></p>
+        </div>
+  
+        <!-- Day 3 -->
+        <div class="day-card">
+          <div class="day-number">Programming Logic Foundation</div>
+          <!-- <div class="day-number">Day 3 and 4: Reasoning Ability </div> -->
+          <h3>Topics:</h3>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=YvjVdOV_7Vo" target="_blank">Number Series</a></li>
+            <li>
+              <a href="https://testbook.com/reasoning/blood-relation-reasoning" onclick="showContent('functions')">Blood Realtions</a> | 
+              <a href="https://testbook.com/reasoning/coding-decoding" onclick="showContent('functions')">Coding-Decoding</a>|
+              <a href="https://testbook.com/maths/problems-on-ages" onclick="showContent('functions')">Ages</a>
+            </li>
+            
+            <li>
+              <a href="https://www.toppr.com/guides/quantitative-aptitude/number-series/odd-man-out-series/" onclick="showContent('functions')">Odd Man Out-Numbers</a> |
+              <a href="https://www.geeksforgeeks.org/direction-and-distance-concepts-questions-solved-examples/" target="_blank">Distance and Directions</a>
+            </li>
+            <li><a href="https://testbook.com/reasoning/statement-and-conclusion-reasoning">Statement and Conclusion</a> | 
+            <a href="https://www.careers360.com/reasoning/seating-arrangement-topic-pge">Seating Arrangement</a> |
+            <a href="https://www.indiabix.com/non-verbal-reasoning/analogy/">Analog</a>
+            </li>
+            <li><a href="https://www.careers360.com/reasoning/mathematical-operations-topic-pge">Mathematical Operational Arrangement</a> |
+               <a href="/html/symbols-notations.html">Symbols and Notations</a>
+             </li>
+             
+          </ul>
+          <div class="resources">
+            <h4>Resources:</h4>
+            <p><img src="/assets/link.png" width="15px" height="15px"> <a href="/html/reasoning.html" target="_blank">Reasoning Handbook</a></p>
+            📘 <a href="\reasoning.pdf" target="_blank">Reasoning PDF</a><br>
+          </div>
+          <p class="practice">Practice: <a href="/html/quiz3.html" target="_blank">50 Series Problems</a></p>
+        </div>
+  
+        <!-- Day 5 to 6 -->
+        <div class="day-card even">
+          <div class="day-number">Numerical Ability</div>
+          <!-- <div class="day-number">Day 5 and 6:Numerical Ability</div> -->
+          <h3>Topics:</h3>
+          <ul>
+            <li><a href="https://www.careers360.com/reasoning/seating-arrangement-topic-pge" target="_blank">Seating Arrangements</a> | 
+              <a href="https://learnfrenzy.com/reasoning/logical-reasoning/number-series#google_vignette"> Series</a> | 
+              <a href="https://www.geeksforgeeks.org/percentage/" target="_blank">Percentages</a> | 
+              <a href="https://byjus.com/govt-exams/mixture-alligation-questions/" target="_blank">Allegations and Mixtures</a>
+            </li>
+            <li><a href="https://www.geeksforgeeks.org/tricks-to-solve-probability-questions/" target="_blank">Probability </a> | 
+              <a href="https://www.geeksforgeeks.org/ratio-and-proportion-aptitude-questions/">Ratios and Proportion</a> |
+              <a href="https://www.geeksforgeeks.org/tricks-to-solve-questions-on-average/">Averages</a>
+            </li>
+
+            <li>
+              <a href="https://pendulumedu.com/quantitative-aptitude/time-and-work-tricks-basic-concepts-formulas-examples" target="_blank">Work and Time</a> </li>
+  
+            <li><a href="https://www.geeksforgeeks.org/tips-and-tricks-for-speed-distance-and-time/">Speed Time and Distance </a> | 
+              <a href="https://www.geeksforgeeks.org/geometry-aptitude-questions-answers/">Geometry</a> |
+              <a href="https://www.geeksforgeeks.org/divisibility-rules/">Divisibility</a>
+            
+            </li>
+            <li><a href="https://youtu.be/_cW7_BUDYcw?si=Mq87P08gohahnyf1">Profit and Loss </a> |
+            <a href="https://youtu.be/7pg8aQNPkcE">Ages</a> |
+            <a href="https://youtu.be/gLh3eFGu-xk">Clocks and Times</a></li>
+
+             <li><a href="https://codersdaily.in/courses/quantitative-ability/series-and-progressions">Seriesand Progressions </a> |
+              <a href="https://codersdaily.in/courses/quantitative-ability/equations">Equations</a></li> 
+             <li><a href="https://www.geeksforgeeks.org/area-aptitude-questions-and-answers/">Area,Shapes &Perimeter</a> | 
+              <a href="https://www.aptitudetricks.com/quantitative-aptitude/decimal-fraction-quantitative-aptitude/">Decimal Fractions</a></li>
+          
+          </ul>
+          <div class="resources">
+            <h4>Resources:</h4>
+            <p><img src="/assets/link.png" width="15px" height="15px"> <a href="/html/Numerical-Ability.html" target="_blank"> Handbook</a></p>
+            📘 <a href="\Numerical-Ability.pdf" target="_blank"> PDF</a><br>
+          </div>
+          <p class="practice">Practice: <a href="/html/quiz4.html" target="_blank">50 Mcqs Questions</a></p>
+        </div>
+  
+        <!-- Day 9 and 10 -->
+        <div class="day-card">
+          <div class="day-number">Verbal Ability</div>
+          <h3>Topics:</h3>
+          <ul>
+            <li><a href="/html/verbal-Ability.html" target="_blank">Synonyms ,Antonyms,Prepositions</a></li>
+            <li><a href="https://www.geeksforgeeks.org/sentence-completion-with-examples/" target="_blank">Sentence Complete </a> | 
+              <a href="https://www.placementpreparation.io/verbal-ability/change-of-voice/examples/">Active and passive voice</a>  |
+              <a href="/verbal-ability.pdf">spelling Teest</a></li>
+            <li><a href="https://www.placementpreparation.io/verbal-ability/error-spotting/examples/" target="_blank">Spotting Errors </a> |
+              <a href="https://www.geeksforgeeks.org/sentence-completion-with-examples/#sample-questions-on-paragraph-completion">Passage Completion</a> |
+              <a href="https://careericons.com/short-tips/letter-substitution-coding-decoding/41/#google_vignette">Substitution</a>
+            </li>
+            <li><a href="https://byjus.com/govt-exams/sentence-rearrangement/">Sentence Arrangement</a> | 
+              <a href="https://www.placementpreparation.io/verbal-ability/idioms-and-phrases/examples/">Idioms and Phrases</a></li>
+            <li><a href="https://prepinsta.com/sentence-improvement-and-construction/tips-and-tricks-and-shortcuts/">Sentence Improvement</a>
+              <a href="/html/joining-sentenses.html">Joining Sentences</a></li>
+            <li><a href="https://onecompiler.com/html/4399fyznw">Error Correction(Underlined part),Error Correction(Phrase in Bold),Fill in the blanks</a></li>         
+          </ul>
+          <div class="resources">
+            <h4>Resources:</h4>
+            <p><img src="/assets/link.png" width="15px" height="15px"> <a href="/html/verbal-Ability.html" target="_blank"> Handbook</a></p>
+            📘 <a href="\verbal-ability.pdf" target="_blank"> PDF</a><br>
+          </div>
+          <p class="practice">Practice: <a href="/html/quiz5.html" target="_blank">50 Mcqs Questions</a></p>
+        </div>
+        <div class="day-card even">
+          <div class="day-number">Coding </div> 
+          <h3>Topics:</h3>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=GEMZpw7ug-k&list=PLBlnK6fEyqRjdKzSsGiBpr6fAxawT9WWb" target="_blank">Operators</a> | 
+              <a href="https://pythongeeks.org/loops-in-python/">Looping statements</a> | 
+              <a href="https://realpython.com/python3-object-oriented-programming/">Object-Oriented Programming(OOPS)</a></li>
+            <li><a href="https://pynative.com/python-functions/" target="_blank">Functions </a> |
+              <a href="https://www.freecodecamp.org/news/what-is-recursion/">Recursion</a> | 
+              <a href="https://pwskills.com/blog/algorithms-in-python/">Algorithms</a></li>
+            <li><a href="https://www.codechef.com/blogs/arrays-in-python" target="_blank">Arrays</a> |
+              <a href="https://pynative.com/python-control-flow-statements/">Control statements</a> | 
+              <a href="https://www.geeksforgeeks.org/python-string/">Strings</a></li>
+            <li><a href="https://pythonexamples.org/data-structures/">Data Structures: Linked List, Stack, Queue, Trees, and Graph,Scenario and Logical Based Problems are asked</a></li>
+            <li><a href="https://www.geeksforgeeks.org/python-matrix/">Matrix Operations </a> | 
+              <a href="https://www.geeksforgeeks.org/sets-in-python/">Set Theory</a> |
+              <a href="https://www.toppr.com/guides/computer-science/programming-with-python/strings/string-operators/">String Operations</a></li>
+             <li><a href="/html/numbers-pattern.html">Number Series, Pattern Series </a> | 
+              <a href="/html/shortestpath-calculation-logic.html">Shortest Path Calculation Logic</a></li>
+             <li><a href="/html/geometry -numbers.html">Area,Shapes &Perimeter,Numbers and Decimal Fractions</a></li>
+          
+          </ul>
+          
+          <p class="practice">Practice: <a href="/html/coding-questions.html" target="_blank">50 Coding Questions</a></p>
+        </div>
+      </section>
+  
+      <!-- Tips section remains same -->
+    </div>
+  
+    <!-- Footer remains same -->
+    <footer class="footer">
+      <div class="container">
+        <p>2025 TCS NQT Prep by  VKshetRa </p>
+      </div>
+    </footer>
+  </body>
+  <script>
+    function showContent(type) {
+      let contentDiv = document.getElementById("content");
+      
+      if (type === "functions") {
+        contentDiv.innerHTML = "<h4>Functions</h4><p>Functions are reusable blocks of code that perform specific tasks.</p>";
+      } else if (type === "scope") {
+        contentDiv.innerHTML = "<h4>Scope</h4><p>Scope determines the visibility and lifetime of variables in a program.</p>";
+      }
+    }
+  </script>
+  </html>
+  

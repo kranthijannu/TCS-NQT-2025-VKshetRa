@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Coding in Geometry & Numbers</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        header h1 {
+            font-size: 3em;
+        }
+        section {
+            padding: 20px;
+            margin: 10px;
+        }
+        h2 {
+            color: #4CAF50;
+            text-decoration: underline;
+        }
+        .steps, .practice-problems, .details {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .steps ul, .practice-problems ul {
+            list-style-type: none;
+        }
+        .steps ul li, .practice-problems ul li {
+            margin: 10px 0;
+        }
+        .code-example {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1em;
+            color: #333;
+            overflow-x: auto;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 1em;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .details p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Master Coding in Geometry & Numbers</h1>
+    <p>Step-by-step guide to learning Area, Shapes, Perimeter, and Decimal Fractions</p>
+</header>
+
+<section>
+    <h2>1. Area, Shapes & Perimeter</h2>
+    <div class="details">
+        <p><strong>Understanding Area and Perimeter:</strong> In geometry, the <em>area</em> of a shape refers to the amount of space it occupies, while the <em>perimeter</em> is the total distance around the shape.</p>
+        <p><strong>Important Shapes:</strong> Basic shapes like squares, rectangles, triangles, and circles have well-defined formulas for area and perimeter that we need to implement in coding.</p>
+        <p><strong>Key Formulas:</strong></p>
+        <ul>
+            <li><strong>Rectangle:</strong> Area = length × width, Perimeter = 2 × (length + width)</li>
+            <li><strong>Square:</strong> Area = side², Perimeter = 4 × side</li>
+            <li><strong>Circle:</strong> Area = π × radius², Perimeter (Circumference) = 2 × π × radius</li>
+            <li><strong>Triangle:</strong> Area = 1/2 × base × height, Perimeter = sum of all sides</li>
+        </ul>
+    </div>
+    <div class="steps">
+        <h3>Step-by-Step Learning</h3>
+        <ul>
+            <li><strong>Learn Basic Geometric Shapes</strong> and their formulas (e.g., Circle, Square, Rectangle, Triangle).</li>
+            <li><strong>Practice Calculations</strong> of Area and Perimeter using Python functions.</li>
+            <li><strong>Understand Composite Shapes</strong> and break them down into smaller basic shapes.</li>
+            <li><strong>Advanced Shape Calculations</strong> involving irregular or complex shapes.</li>
+        </ul>
+        <h3>Code Example: Rectangle Area and Perimeter</h3>
+        <div class="code-example">
+            <p><strong>Code to Calculate Area and Perimeter of a Rectangle</strong></p>
+            <pre>
+def rectangle_area_perimeter(length, width):
+    area = length * width
+    perimeter = 2 * (length + width)
+    return area, perimeter
+
+# Example
+length = 5
+width = 10
+area, perimeter = rectangle_area_perimeter(length, width)
+print("Area:", area)
+print("Perimeter:", perimeter)
+            </pre>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>2. Numbers and Decimal Fractions</h2>
+    <div class="details">
+        <p><strong>Decimal Fractions:</strong> Decimal fractions are numbers expressed in decimal format. They are widely used in coding for handling floating-point numbers and representing non-integer values.</p>
+        <p><strong>Key Concepts:</strong></p>
+        <ul>
+            <li><strong>Integers vs Decimals:</strong> Integers are whole numbers, while decimals are fractional parts represented after a decimal point.</li>
+            <li><strong>Binary and Decimal Conversion:</strong> Converting between binary (base-2) and decimal (base-10) number systems is a common task in programming.</li>
+            <li><strong>Floating-Point Precision:</strong> Floating-point numbers in computing can lead to precision issues due to their limited representation in memory.</li>
+        </ul>
+        <p><strong>Why Decimal to Binary Conversion Matters:</strong> Binary representation is essential in computer science as it is the language that computers use for processing and storing data.</p>
+    </div>
+    <div class="steps">
+        <h3>Step-by-Step Learning</h3>
+        <ul>
+            <li><strong>Understand Integers vs Decimals</strong> and their differences.</li>
+            <li><strong>Learn Conversion</strong> between Decimal and Fraction.</li>
+            <li><strong>Handle Floating-Point Precision</strong> and avoid common rounding errors.</li>
+            <li><strong>Learn Decimal to Binary</strong> and Binary to Decimal conversion techniques.</li>
+        </ul>
+        <h3>Code Example: Decimal to Binary Conversion</h3>
+        <div class="code-example">
+            <p><strong>Code to Convert Decimal to Binary</strong></p>
+            <pre>
+decimal_number = 5
+binary_rep = bin(decimal_number)[2:]  # Remove '0b' prefix
+print("Binary representation:", binary_rep)  # Output: 101
+            </pre>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>3. Practice Problems</h2>
+    <div class="practice-problems">
+        <h3>Basic Problems</h3>
+        <ul>
+            <li>Find the area and perimeter of a rectangle given its length and width.</li>
+            <li>Convert a decimal number to binary and print the result.</li>
+        </ul>
+        <h3>Medium Problems</h3>
+        <ul>
+            <li>Find the area of a composite shape (e.g., circle inside a square).</li>
+            <li>Handle a problem with decimal fractions and rounding operations.</li>
+        </ul>
+        <h3>Advanced Problems</h3>
+        <ul>
+            <li>Implement a function for multi-source shortest path problems.</li>
+            <li>Write a function for decimal-to-binary conversion with precision handling.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h2>4. Next Steps to Master Coding</h2>
+    <p>To continue mastering these topics, practice coding regularly and solve problems from online platforms like LeetCode, Codeforces, and HackerRank. Focus on problem-solving and optimize your code for better efficiency.</p>
+    <button class="button">Start Practicing Now</button>
+</section>
+
+<footer>
+    <p>2025 Master Coding in Geometry & Numbers. By VKshetRa</p>
+</footer>
+
+</body>
+</html>

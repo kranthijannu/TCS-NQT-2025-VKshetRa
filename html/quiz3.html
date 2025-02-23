@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Quiz</title>
+    <link rel="stylesheet" href="/css/quiz.css">
+    <link rel="icon" type=""image/png" href="/assets/logo.png">
+</head>
+<body>
+    <div class="quiz-container">
+        <!-- Question 1 -->
+        <section class="question-section">
+            <div class="question-box">What comes next in the series? 2, 6, 12, 20, 30, ?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) 36</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) 40</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) 42</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) 44</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <!-- Question 2 -->
+        <section class="question-section">
+            <div class="question-box">Find the missing number: 5, 10, 20, 40, ?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) 60</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) 80</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) 100</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) 120</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <!-- Question 3 -->
+        <section class="question-section">
+            <div class="question-box">Identify the wrong number in the series: 3, 9, 27, 81, 243, 730</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) 9</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) 27</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) 243</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) 730</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: D</p>
+        </section>
+
+        <!-- Question 4 -->
+        <section class="question-section">
+            <div class="question-box">Find the missing number: 1, 4, 9, 16, ?, 36</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) 20</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) 25</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) 30</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) 32</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <!-- Question 5 -->
+        <section class="question-section">
+            <div class="question-box">Which number comes next in the series? 50, 45, 40, 35, ?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) 25</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) 28</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) 30</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) 32</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <!-- Question 6 -->
+        <section class="question-section">
+            <div class="question-box">Identify the pattern and find the missing number: 3, 6, 11, 18, 27, ?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) 35</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) 36</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) 38</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) 40</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <!-- Question 7 -->
+        <section class="question-section">
+            <div class="question-box">What comes next in the sequence? 1, 1, 2, 3, 5, 8, ?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) 11</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) 12</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) 13</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) 14</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <!-- Question 8 -->
+        <section class="question-section">
+            <div class="question-box">Find the missing term in the series: 81, 27, 9, 3, ?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) 1</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) 2</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) 0</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) 3</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 9 -->
+        <section class="question-section">
+            <div class="question-box">Identify the next number: 2, 4, 8, 16, ?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) 24</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) 32</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) 40</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) 48</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <!-- Question 10 -->
+        <section class="question-section">
+            <div class="question-box">Identify the odd number: 1, 3, 7, 15, 31, 63</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) 3</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) 7</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) 15</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) 31</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <!-- Question 11 -->
+        <section class="question-section">
+            <div class="question-box">A is the brother of B. B is the mother of C. How is A related to C?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) Uncle</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) Brother</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) Grandfather</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) Father</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 12 -->
+        <section class="question-section">
+            <div class="question-box">If P is the father of Q, and Q is the mother of R, then how is P related to R?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) Grandfather</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) Uncle</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) Brother</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) Father</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 13 -->
+        <section class="question-section">
+            <div class="question-box">X is the son of Y. Y is the daughter of Z. How is Z related to X?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) Father</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) Grandfather</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) Grandmother</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) Uncle</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <!-- Question 14 -->
+        <section class="question-section">
+            <div class="question-box">If A + B means A is the father of B, A - B means A is the sister of B, A * B means A is the mother of B, then what does A * B + C mean?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) A is the grandmother of C</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) A is the mother of C</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) A is the father of C</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) A is the sister of C</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 15 -->
+        <section class="question-section">
+            <div class="question-box">P's mother is Q's sister, and R is Q's mother. How is P related to R?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) Granddaughter</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) Daughter</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) Grandson</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) Both a and c</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: D</p>
+        </section>
+
+        <!-- Question 16 -->
+        <section class="question-section">
+            <div class="question-box">If APPLE is coded as ELPPA, how is ORANGE coded?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) EGNARO</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) ENAROG</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) ERGONA</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) ORGANE</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 17 -->
+        <section class="question-section">
+            <div class="question-box">If MANGO is coded as 41597, then BANANA is coded as:</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) 217272</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) 217727</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) 271272</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) 217772</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <!-- Question 18 -->
+        <section class="question-section">
+            <div class="question-box">In a certain code, TREE is written as UQFF, how is PLANT written?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) QMBOU</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) OMZMS</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) ONAOU</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) QMBNV</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 19 -->
+        <section class="question-section">
+            <div class="question-box">If DOG is coded as 415, then CAT is coded as:</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) 312</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) 313</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) 314</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) 315</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 20 -->
+        <section class="question-section">
+            <div class="question-box">If GOAT is coded as IQCV, how is SHEEP coded?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) UJGGQ</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) TJFGQ</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) VJHHQ</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) VJGGQ</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: D </p>
+        </section>
+
+        <!-- Question 21 -->
+        <section class="question-section">
+            <div class="question-box">The sum of the present ages of a father and his son is 50 years. After 10 years, the father will be twice as old as the son. What is the present age of the son?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) 10</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) 15</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) 20</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) 25</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <!-- Question 22 -->
+        <section class="question-section">
+            <div class="question-box">A father is three times as old as his son. After 8 years, he will be twice as old as his son. What is the father’s age?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) 24</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) 30</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) 36</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) 40</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <!-- Question 23 -->
+        <section class="question-section">
+            <div class="question-box">The present age of A is twice that of B. After 10 years, A’s age will be 1.5 times that of B. Find A’s present age.</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) 20</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) 30</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) 40</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) 50</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <!-- Question 24 -->
+        <section class="question-section">
+            <div class="question-box">A mother’s age is three times her daughter’s age. After 5 years, the mother’s age will be twice the daughter’s age. What is the mother’s age?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) 30</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) 35</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) 40</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) 45</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <!-- Question 25 -->
+        <section class="question-section">
+            <div class="question-box">If the sum of the ages of A and B is 60 years and the difference is 20 years, find the younger one’s age.</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) 10</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) 15</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) 20</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) 25</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <!-- Question 26 -->
+        <section class="question-section">
+            <div class="question-box">Find the odd number in the series: 5, 10, 15, 20, 30, 35</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) 10</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) 20</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) 30</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) 35</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: D</p>
+        </section>
+
+        <!-- Question 27 -->
+        <section class="question-section">
+            <div class="question-box">Find the odd one out: 121, 144, 169, 196, 225, 256, 289, 314</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) 169</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) 196</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) 289</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) 314</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: D</p>
+        </section>
+
+        <!-- Question 28 -->
+        <section class="question-section">
+            <div class="question-box">Identify the odd number: 2, 4, 6, 8, 11, 14</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) 2</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) 8</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) 11</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) 14</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <!-- Question 29 -->
+        <section class="question-section">
+            <div class="question-box">Find the odd number: 23, 29, 31, 37, 41, 49, 53</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) 29</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) 31</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) 41</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) 49</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: D</p>
+        </section>
+
+        <!-- Question 30 -->
+        <section class="question-section">
+            <div class="question-box">Find the odd one out: 3, 6, 9, 12, 18, 21, 24</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) 6</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) 12</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) 18</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) 21</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: D</p>
+        </section>
+
+        <!-- Question 31 -->
+        <section class="question-section">
+            <div class="question-box">A person walks 5 km north, then turns right and walks 3 km, then turns right and walks 5 km, and finally turns left and walks 2 km. How far is he from his starting point?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) 5 km</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) 4 km</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) 2 km</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) 3 km</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <!-- Question 32 -->
+        <section class="question-section">
+            <div class="question-box">A man moves 6 m south, then 8 m east, then 6 m north, and finally 8 m west. What is his final position from the starting point?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) 0 m</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) 2 m east</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) 2 m west</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) 4 m west</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 33 -->
+        <section class="question-section">
+            <div class="question-box">If South-East is called East, North-West is called North, South-West is called West, and so on, what will North-East be called?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) North</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) East</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) West</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) South</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <!-- Question 34 -->
+        <section class="question-section">
+            <div class="question-box">A person is facing south. He turns 45° clockwise, then 90° counterclockwise. In which direction is he facing now?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) North-West</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) North-East</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) South-West</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) South-East</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <!-- Question 35 -->
+        <section class="question-section">
+            <div class="question-box">Rohan walks 3 km north, then turns east and walks 4 km. How far is he from the starting point?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) 3 km</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) 4 km</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) 5 km</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) 7 km</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <!-- Question 36 -->
+        <section class="question-section">
+            <div class="question-box">Statement: "All students in a school wear uniforms."<br>Conclusion: (i) All students wearing uniforms belong to that school.<br>(ii) Some students may not wear uniforms.</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) Only (i) is true</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) Only (ii) is true</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) Both (i) and (ii) are true</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) Neither (i) nor (ii) is true</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 37 -->
+        <section class="question-section">
+            <div class="question-box">Statement: "All mangoes are fruits. Some fruits are apples."<br>Conclusion: (i) Some apples are mangoes.<br>(ii) All apples are fruits.</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) Only (i) is true</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) Only (ii) is true</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) Both (i) and (ii) are true</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) Neither (i) nor (ii) is true</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <!-- Question 38 -->
+        <section class="question-section">
+            <div class="question-box">Statement: "All pens are blue. Some blue items are ink bottles."<br>Conclusion: (i) Some ink bottles are pens.<br>(ii) Some ink bottles may be blue.</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) Only (i) is true</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) Only (ii) is true</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) Both (i) and (ii) are true</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) Neither (i) nor (ii) is true</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <!-- Question 39 -->
+        <section class="question-section">
+            <div class="question-box">Statement: "Some birds can swim. All ducks are birds."<br>Conclusion: (i) Some ducks can swim.<br>(ii) All birds can swim.</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) Only (i) is true</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) Only (ii) is true</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) Both (i) and (ii) are true</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) Neither (i) nor (ii) is true</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 40 -->
+        <section class="question-section">
+            <div class="question-box">Statement: "No monkey is a dog. Some dogs are cats."<br>Conclusion: (i) No monkey is a cat.<br>(ii) Some cats are dogs.</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) Only (i) is true</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) Only (ii) is true</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) Both (i) and (ii) are true</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) Neither (i) nor (ii) is true</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <!-- Question 41 -->
+        <section class="question-section">
+            <div class="question-box">A, B, C, D, and E are sitting in a row. C is to the left of D, but to the right of B. A is to the left of B. Who is sitting in the middle?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) A</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) B</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) C</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) D</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <!-- Question 42 -->
+        <section class="question-section">
+            <div class="question-box">P, Q, R, S, and T are sitting in a row. Q is sitting between P and R. S is to the right of T. Who is sitting at the extreme right?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) P</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) Q</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) R</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) S</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: D</p>
+        </section>
+
+        <!-- Question 43 -->
+        <section class="question-section">
+            <div class="question-box">In a circular arrangement of six people, A is between B and C. D is to the left of C. Who is to the right of A?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) B</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) C</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) D</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) E</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 44 -->
+        <section class="question-section">
+            <div class="question-box">A, B, C, D, and E are sitting in a circular arrangement. If A is sitting next to B and D is opposite C, who is sitting to the right of A?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) B</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) C</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) D</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) E</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: D</p>
+        </section>
+
+        <!-- Question 45 -->
+        <section class="question-section">
+            <div class="question-box">If four friends P, Q, R, and S sit in a row, and P is not next to S, who can sit next to Q?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) P</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) R</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) S</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) Any of the above</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: D</p>
+        </section>
+
+        <!-- Question 46 -->
+        <section class="question-section">
+            <div class="question-box">If A @ B means A is multiplied by B, and A # B means A is added to B, what is 4 @ 5 # 3?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) 20</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) 23</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) 35</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) 60</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <!-- Question 47 -->
+        <section class="question-section">
+            <div class="question-box">If P + Q = 2P - Q, what is the value of 6 + 3?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) 3</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) 9</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) 12</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) 6</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p> 
+        </section>
+
+        <!-- Question 48 -->
+        <section class="question-section">
+            <div class="question-box">If @ means +, # means -, % means ×, & means ÷, then what is 8 % 2 @ 6 # 4 & 2?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) 14</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) 12</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) 10</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) 8</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <!-- Question 49 -->
+        <section class="question-section">
+            <div class="question-box">If A & B means A is divided by B, and A % B means A is multiplied by B, then what is 8 & 4 % 3?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) 2</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) 6</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) 12</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) 24</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <!-- Question 50 -->
+        <section class="question-section">
+            <div class="question-box">If P * Q = P² + Q², then what is 3 * 4?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) 7</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) 12</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) 25</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) 20</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+    </div>
+
+    <script src="/script/quiz.js"></script>
+</body>
+</html>

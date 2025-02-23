@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Quiz</title>
+    <link rel="stylesheet" href="/css/quiz.css">
+    <link rel="icon" type=""image/png" href="/assets/logo.png">
+</head>
+<body>
+    <div class="quiz-container">
+        <!-- Question 1 -->
+        <section class="question-section">
+            <div class="question-box">What is a pointer in C?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. A variable that stores the address of another variable</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. A variable that stores a value</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. A function that returns an address</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. A function that returns a value</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 2 -->
+        <section class="question-section">
+            <div class="question-box">How do you declare a pointer in C?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. int *ptr;</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. int ptr*;</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. int &ptr;</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. int ptr&;</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 3 -->
+        <section class="question-section">
+            <div class="question-box">What is the purpose of the * operator when used with pointers?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. To declare a pointer</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. To access the value at the address stored in the pointer</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. To multiply two values</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. To divide two values</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <!-- Question 4 -->
+        <section class="question-section">
+            <div class="question-box">What is the difference between malloc() and calloc()?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. malloc() allocates memory without initializing it, while calloc() allocates memory and initializes it to zero</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. malloc() allocates memory and initializes it to zero, while calloc() allocates memory without initializing it</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. malloc() deallocates memory, while calloc() allocates memory</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. There is no difference</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 5 -->
+        <section class="question-section">
+            <div class="question-box">How do you free dynamically allocated memory in C?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. Using the free() function</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. Using the delete operator</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. Using the malloc() function</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. Using the calloc() function</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 6 -->
+        <section class="question-section">
+            <div class="question-box">What happens if you free a pointer twice?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. The program will crash</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. The program will run normally</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. The memory will be freed twice</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. The pointer will be set to NULL</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 7 -->
+        <section class="question-section">
+            <div class="question-box">How do you initialize a pointer to NULL?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. int *ptr = NULL;</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. int ptr = NULL;</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. int *ptr = 0;</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. int ptr = 0;</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 8 -->
+        <section class="question-section">
+            <div class="question-box">What is pointer arithmetic?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. Performing arithmetic operations on pointers</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. Performing arithmetic operations on the values pointed to by pointers</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. Performing arithmetic operations on the addresses stored in pointers</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. Performing arithmetic operations on the types of pointers</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <!-- Question 9 -->
+        <section class="question-section">
+            <div class="question-box">How do you access an array using a pointer?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. Using the array subscript notation</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. Using the pointer dereference notation</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. Both A and B</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. None of the above</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <!-- Question 10 -->
+        <section class="question-section">
+            <div class="question-box">What is the difference between const int *ptr and int *const ptr?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. const int *ptr is a pointer to a constant integer, while int *const ptr is a constant pointer to an integer</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. const int *ptr is a constant pointer to an integer, while int *const ptr is a pointer to a constant integer</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. Both are the same</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. None of the above</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 11 -->
+        <section class="question-section">
+            <div class="question-box">Can a pointer point to another pointer? If yes, how?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. Yes, by using a double pointer</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. No, a pointer cannot point to another pointer</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. Yes, by using a single pointer</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. Yes, by using a reference</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 12 -->
+        <section class="question-section">
+            <div class="question-box">How do you pass a pointer to a function?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. By passing the address of the pointer</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. By passing the value of the pointer</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. By passing the pointer itself</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. By passing a reference to the pointer</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <!-- Question 13 -->
+        <section class="question-section">
+            <div class="question-box">What is a void pointer?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. A pointer that points to a void function</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. A pointer that points to a void variable</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. A pointer that points to any data type</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. A pointer that points to a null value</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <!-- Question 14 -->
+        <section class="question-section">
+            <div class="question-box">How do you typecast a void pointer?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. By using the (type) cast</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. By using the (void) cast</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. By using the (pointer) cast</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. By using the (data) cast</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 15 -->
+        <section class="question-section">
+            <div class="question-box">What happens if a pointer is not initialized before use?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. It will point to a random memory location</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. It will point to NULL</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. It will cause a compilation error</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. It will cause a runtime error</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 16 -->
+        <section class="question-section">
+            <div class="question-box">Which library in C is used for input and output operations?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. stdio.h</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. stdlib.h</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. string.h</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. math.h</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 17 -->
+        <section class="question-section">
+            <div class="question-box">What is the purpose of the stdio.h library?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. To provide functions for input and output operations</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. To provide functions for memory allocation</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. To provide functions for string manipulation</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. To provide functions for mathematical operations</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 18 -->
+        <section class="question-section">
+            <div class="question-box">Which function is used to read input from the user?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. printf()</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. scanf()</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. gets()</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. puts()</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <!-- Question 19 -->
+        <section class="question-section">
+            <div class="question-box">How do you open a file using the stdio.h library?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. fopen()</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. open()</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. file_open()</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. file()</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 20 -->
+        <section class="question-section">
+            <div class="question-box">What is the difference between fopen() and fclose()?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. fopen() opens a file, while fclose() closes a file</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. fopen() reads a file, while fclose() writes to a file</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. fopen() writes to a file, while fclose() reads a file</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. fopen() closes a file, while fclose() opens a file</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 21 -->
+        <section class="question-section">
+            <div class="question-box">How do you read a string in C without using scanf()?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. gets()</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. fgets()</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. getchar()</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. puts()</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <!-- Question 22 -->
+        <section class="question-section">
+            <div class="question-box">Which function is used to find the length of a string?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. strlen()</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. strcpy()</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. strcat()</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. strcmp()</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 23 -->
+        <section class="question-section">
+            <div class="question-box">How do you copy one string to another in C?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. Using the strcpy() function</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. Using the strcat() function</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. Using the strcmp() function</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. Using the strlen() function</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 24 -->
+        <section class="question-section">
+            <div class="question-box">What is the purpose of the math.h library?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. To provide functions for mathematical operations</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. To provide functions for input and output operations</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. To provide functions for memory allocation</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. To provide functions for string manipulation</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 25 -->
+        <section class="question-section">
+            <div class="question-box">Which function is used to calculate the power of a number?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. pow()</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. sqrt()</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. abs()</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. ceil()</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 26 -->
+        <section class="question-section">
+            <div class="question-box">How do you get the absolute value of a number in C?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. Using the abs() function</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. Using the fabs() function</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. Using the labs() function</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. Using the cabs() function</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 27 -->
+        <section class="question-section">
+            <div class="question-box">Which library provides functions like malloc() and free()?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. stdlib.h</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. stdio.h</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. string.h</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. math.h</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 28 -->
+        <section class="question-section">
+            <div class="question-box">How do you compare two strings in C?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. Using the strcmp() function</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. Using the strcpy() function</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. Using the strcat() function</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. Using the strlen() function</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 29 -->
+        <section class="question-section">
+            <div class="question-box">What is the purpose of time.h in C?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. To provide functions for handling date and time</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. To provide functions for input and output operations</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. To provide functions for memory allocation</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. To provide functions for string manipulation</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 30 -->
+        <section class="question-section">
+            <div class="question-box">How do you generate a random number using stdlib.h?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. Using the rand() function</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. Using the srand() function</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. Using the random() function</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. Using the generate() function</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 31 -->
+        <section class="question-section">
+            <div class="question-box">What is the difference between call by value and call by reference?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. Call by value passes a copy of the variable, while call by reference passes the actual variable</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. Call by value passes the actual variable, while call by reference passes a copy of the variable</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. Both pass a copy of the variable</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. Both pass the actual variable</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 32 -->
+        <section class="question-section">
+            <div class="question-box">How do you pass a variable by value in C?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. By passing the variable directly</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. By passing the address of the variable</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. By passing a pointer to the variable</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. By passing a reference to the variable</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 33 -->
+        <section class="question-section">
+            <div class="question-box">How do you pass a variable by reference in C?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. By passing the variable directly</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. By passing the address of the variable</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. By passing a copy of the variable</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. By passing a reference to the variable</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <!-- Question 34 -->
+        <section class="question-section">
+            <div class="question-box">Why does call by value not modify the original variable?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. Because it passes a copy of the variable</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. Because it passes the actual variable</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. Because it passes a reference to the variable</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. Because it passes a pointer to the variable</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 35 -->
+        <section class="question-section">
+            <div class="question-box">How can you modify the value of a variable inside a function?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. By passing the variable by reference</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. By passing the variable by value</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. By passing a copy of the variable</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. By passing a constant variable</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 36 -->
+        <section class="question-section">
+            <div class="question-box">What are the advantages of using call by reference?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. It allows the function to modify the original variable</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. It allows the function to work with large data structures efficiently</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. It avoids the overhead of copying large data structures</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. All of the above</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: D</p>
+        </section>
+
+        <!-- Question 37 -->
+        <section class="question-section">
+            <div class="question-box">What happens when an array is passed to a function?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. A copy of the array is passed</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. The address of the first element of the array is passed</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. The entire array is passed</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. The array is passed by value</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <!-- Question 38 -->
+        <section class="question-section">
+            <div class="question-box">How do you pass a structure to a function?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. By passing the structure directly</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. By passing a pointer to the structure</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. By passing a reference to the structure</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. By passing a copy of the structure</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <!-- Question 39 -->
+        <section class="question-section">
+            <div class="question-box">Can you return a pointer from a function?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. Yes</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. No</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. Only if the pointer is global</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. Only if the pointer is static</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 40 -->
+        <section class="question-section">
+            <div class="question-box">What happens if you return a local pointer from a function?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. It will cause a runtime error</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. It will cause a compilation error</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. It will return a dangling pointer</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. It will return a null pointer</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <!-- Question 41 -->
+        <section class="question-section">
+            <div class="question-box">What is recursion?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. A function calling itself</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. A function calling another function</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. A function without parameters</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. A function with only one argument</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 42 -->
+        <section class="question-section">
+            <div class="question-box">What is the base case in recursion?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. The condition under which the recursion ends</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. The condition under which the recursion starts</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. The condition under which the recursion continues</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. The condition under which the recursion is paused</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 43 -->
+        <section class="question-section">
+            <div class="question-box">How do you write a recursive function to calculate the factorial of a number?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. int factorial(int n) { if (n == 0) return 1; else return n * factorial(n - 1); }</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. int factorial(int n) { if (n == 0) return 0; else return n + factorial(n - 1); }</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. int factorial(int n) { if (n == 1) return 1; else return n * factorial(n + 1); }</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. int factorial(int n) { if (n == 1) return 0; else return n + factorial(n + 1); }</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 44 -->
+        <section class="question-section">
+            <div class="question-box">What happens if a recursive function has no base case?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. It will cause a stack overflow</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. It will cause a compilation error</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. It will cause a runtime error</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. It will cause an infinite loop</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 45 -->
+        <section class="question-section">
+            <div class="question-box">How do you calculate the nth Fibonacci number using recursion?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. int fibonacci(int n) { if (n <= 1) return n; else return fibonacci(n - 1) + fibonacci(n - 2); }</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. int fibonacci(int n) { if (n <= 1) return n; else return fibonacci(n + 1) + fibonacci(n + 2); }</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. int fibonacci(int n) { if (n <= 1) return n; else return fibonacci(n - 1) - fibonacci(n - 2); }</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. int fibonacci(int n) { if (n <= 1) return n; else return fibonacci(n + 1) - fibonacci(n + 2); }</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 46 -->
+        <section class="question-section">
+            <div class="question-box">What is the difference between recursion and iteration?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. Recursion uses function calls, while iteration uses loops</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. Recursion uses loops, while iteration uses function calls</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. Both use function calls</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. Both use loops</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 47 -->
+        <section class="question-section">
+            <div class="question-box">What are the advantages of recursion?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. It can simplify the code</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. It can make the code easier to understand</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. It can solve problems that are naturally recursive</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. All of the above</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: D</p>
+        </section>
+
+        <!-- Question 48 -->
+        <section class="question-section">
+            <div class="question-box">How can recursion lead to stack overflow?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. By making too many recursive calls</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. By not having a base case</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. By having a base case that is never reached</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. All of the above</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: D</p>
+        </section>
+
+        <!-- Question 49 -->
+        <section class="question-section">
+            <div class="question-box">How do you find the greatest common divisor (GCD) using recursion?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. int gcd(int a, int b) { if (b == 0) return a; else return gcd(b, a % b); }</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. int gcd(int a, int b) { if (a == 0) return b; else return gcd(a, b % a); }</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. int gcd(int a, int b) { if (b == 0) return a; else return gcd(a % b, b); }</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. int gcd(int a, int b) { if (a == 0) return b; else return gcd(b % a, a); }</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Question 50 -->
+        <section class="question-section">
+            <div class="question-box">How do you convert a recursive function into an iterative function?</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">A. By using a loop</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">B. By using a function call</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">C. By using a pointer</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">D. By using a reference</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+    </div>
+
+    <script src="/script/quiz.js"></script>
+</body>
+</html>

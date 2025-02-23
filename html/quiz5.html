@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="/css/quiz.css">
+    <link rel="icon" type=""image/png" href="/assets/logo.png">
+</head>
+<body>
+    <div class="quiz-container">
+        <!-- Synonyms & Antonyms Questions -->
+        <section class="question-section">
+            <div class="question-box">Choose the synonym of “Abundant”</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) Scarce</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) Limited</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) Plentiful</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) Meager</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">Choose the antonym of “Hostile”</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) Aggressive</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) Friendly</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) Unkind</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) Bitter</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">Choose the synonym of “Adversity”</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) Misfortune</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) Happiness</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) Success</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) Victory</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">Choose the antonym of “Benevolent”</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) Kind</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) Generous</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) Cruel</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) Charitable</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">Choose the synonym of “Eloquent”</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) Silent</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) Fluent</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) Dull</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) Weak</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">Choose the antonym of “Diligent”</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) Hardworking</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) Lazy</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) Smart</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) Clever</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">Choose the synonym of “Obsolete”</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) New</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) Modern</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) Outdated</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) Useful</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">Choose the antonym of “Prudent”</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) Wise</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) Careless</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) Sensible</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) Thoughtful</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">Choose the synonym of “Tedious”</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) Interesting</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) Boring</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) Entertaining</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) Short</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">Choose the antonym of “Fragile”</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) Weak</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) Delicate</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) Strong</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) Brittle</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <!-- Prepositions Questions -->
+        <section class="question-section">
+            <div class="question-box">He is married ___ my cousin.</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) with</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) to</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) at</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) on</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">The cat is hiding ___ the table.</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) in</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) under</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) on</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) over</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">She was absent ___ school yesterday.</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) at</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) in</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) from</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) with</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">We walked ___ the river for an hour.</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) along</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) across</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) on</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) over</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">The exam is scheduled ___ Monday.</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) in</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) at</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) on</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) over</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <!-- Sentence Completion Questions -->
+        <section class="question-section">
+            <div class="question-box">If you work hard, you ____ succeed.</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) will</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) would</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) shall</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) can</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">She is interested ___ learning new languages.</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) on</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) in</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) at</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) of</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">The teacher told us that the Earth ___ round.</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) is</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) was</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) were</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) has been</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">My father is ___ honest man.</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) a</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) an</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) the</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) none</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">I prefer tea ___ coffee.</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) than</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) over</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) to</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) from</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <!-- Active and Passive Voice Questions -->
+        <section class="question-section">
+            <div class="question-box">Change to passive: "He wrote a novel."</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) A novel is written by him.</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) A novel was written by him.</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) A novel has been written by him.</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) A novel had been written by him.</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">Change to active: "The cake was baked by her."</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) She is baking the cake.</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) She will bake the cake.</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) She bakes the cake.</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) She baked the cake.</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: D</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">Change to passive: "They are watching a movie."</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) A movie was watched by them.</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) A movie is being watched by them.</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) A movie has been watched by them.</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) A movie will be watched by them.</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">Change to active: "The letter has been written by him."</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) He has written the letter.</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) He had written the letter.</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) He will write the letter.</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) He is writing the letter.</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">Change to passive: "She will complete the project."</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) The project will be completed by her.</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) The project is being completed by her.</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) The project has been completed by her.</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) The project was completed by her.</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Spotting Errors Questions -->
+        <section class="question-section">
+            <div class="question-box">I enjoy to play football every evening. (Find the error)</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) I enjoy</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) to play</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) football</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) every evening</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">The news are very shocking.</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) The</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) news</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) are</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) shocking</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">He prefer coffee than tea.</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) He</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) prefer</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) coffee</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) than</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">She does not knows the answer.</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) She</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) does</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) not</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) knows</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: D</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">Each of the students have a book.</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) Each</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) of the students</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) have</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) a book</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <!-- Idioms and Phrases Questions -->
+        <section class="question-section">
+            <div class="question-box">"A blessing in disguise" means:</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) A hidden gift</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) A good thing that seemed bad at first</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) A magical blessing</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) A religious belief</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">"Break the ice" means:</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) To start a conversation</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) To freeze something</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) To break a glass</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) To end a friendship</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">"Hit the sack" means:</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) To sleep</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) To hit someone</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) To attack a sack</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) To go out</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">"Under the weather" means:</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) Feeling sick</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) Feeling happy</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) Feeling cold</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) Feeling lazy</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">"Burn the midnight oil" means:</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) Work late at night</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) Burn something</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) Be careless</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) Cook at night</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Sentence Arrangement Questions -->
+        <section class="question-section">
+            <div class="question-box">Arrange the correct order: P: in India Q: is the largest R: the railway network S: in the world</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) RQPS</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) PQRS</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) RPQS</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) QPRS</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Fill in the Blanks Questions -->
+        <section class="question-section">
+            <div class="question-box">He was so tired that he could ___ keep his eyes open.</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) hardly</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) easy</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) mostly</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) deeply</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">I went to the market to buy some fruits, but they ___ sold out.</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) has</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) was</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) were</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) is</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: C</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">She is fond ___ painting and drawing.</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) on</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) in</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) at</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) of</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: D</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">He ran ___ the bus but couldn't catch it.</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) behind</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) upon</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) over</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) among</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Joining Sentences Questions -->
+        <section class="question-section">
+            <div class="question-box">He is very rich. He is not happy. (Choose the best way to join the sentences)</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) Though he is rich, he is not happy.</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) As he is rich, he is not happy.</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) If he is rich, he is not happy.</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) Since he is rich, he is not happy.</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">She was ill. She went to the doctor. (Choose the best way to join the sentences)</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) Being ill, she went to the doctor.</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) Since she went to the doctor, she was ill.</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) She was ill, for she went to the doctor.</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) Although she was ill, she went to the doctor.</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">The train was late. We missed the meeting. (Choose the best way to join the sentences)</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) The train was late but we missed the meeting.</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) Because the train was late, we missed the meeting.</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) The train was late so we did not miss the meeting.</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) The train was late, although we missed the meeting.</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">He didn’t study well. He failed the test.</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) He failed the test because he didn’t study well.</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) He didn’t study well and therefore he failed the test.</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) He failed the test since he didn’t study well.</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) All of the above</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: D</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">The sun was shining. We decided to go on a picnic.</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) Since the sun was shining, we decided to go on a picnic.</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) Because the sun was shining, we did not go on a picnic.</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) We went on a picnic although the sun was shining.</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) The sun was shining, so we stayed at home.</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <!-- Sentence Improvement Questions -->
+        <section class="question-section">
+            <div class="question-box">She is going to school every day. (Find the correct form)</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) She goes to school every day.</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) She will go to school every day.</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) She gone to school every day.</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) She going to school every day.</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">He do not like to play cricket. (Find the correct form)</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) He do not likes to play cricket.</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) He does not like to play cricket.</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) He does not likes to play cricket.</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) He did not liked to play cricket.</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">She sings good. (Find the correct form)</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) She sings well.</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) She sings better.</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) She sings best.</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) She sing well.</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: A</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">I will meet you in next Monday. (Find the correct form)</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) I will meet you on next Monday.</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) I will meet you next Monday.</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) I will meet you at next Monday.</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) I will meet you by next Monday.</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+
+        <section class="question-section">
+            <div class="question-box">They have completed their work yesterday. (Find the correct form)</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(this, 'A')">a) They had completed their work yesterday.</button>
+                <button class="option" onclick="checkAnswer(this, 'B')">b) They completed their work yesterday.</button>
+                <button class="option" onclick="checkAnswer(this, 'C')">c) They have been completing their work yesterday.</button>
+                <button class="option" onclick="checkAnswer(this, 'D')">d) They were completing their work yesterday.</button>
+            </div>
+            <button class="see-answer" onclick="showAnswer(this)">See Answer</button>
+            <p class="correct-answer hidden">Correct Answer: B</p>
+        </section>
+    </div>
+
+    <script src="/script/quiz.js"></script>
+</body>
+</html>
